@@ -1101,18 +1101,59 @@ app.post('/api/contact', async (c) => {
   try {
     const body = await c.req.json()
     
-    // Here you would typically send an email notification
-    // For now, we'll just log it and return success
+    // Log submission for debugging
     console.log('Contact form submission:', body)
     
-    // In production, integrate with your email service here
-    // Example: SendGrid, Mailgun, etc.
+    // Get environment variable for Resend API key
+    // @ts-ignore - Cloudflare env binding
+    const RESEND_API_KEY = c.env?.RESEND_API_KEY
+    
+    // Send email notification via Resend
+    if (RESEND_API_KEY) {
+      try {
+        const emailResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${RESEND_API_KEY}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'GSD Associates Website <onboarding@resend.dev>', // Will use Resend default domain initially
+            to: ['gsdassociatesllc@gmail.com'],
+            subject: `New Contact Form Submission from ${body.name}`,
+            html: `
+              <h2>New Contact Form Submission</h2>
+              <p><strong>Name:</strong> ${body.name}</p>
+              <p><strong>Email:</strong> ${body.email}</p>
+              <p><strong>Company:</strong> ${body.company}</p>
+              <p><strong>Annual Revenue:</strong> ${body.arr}</p>
+              <p><strong>Team Size:</strong> ${body.teamSize}</p>
+              <p><strong>Biggest Challenge:</strong></p>
+              <p>${body.challenge}</p>
+              <hr>
+              <p><small>Submitted from: gsdassociates.net</small></p>
+            `
+          })
+        })
+        
+        if (!emailResponse.ok) {
+          console.error('Resend API error:', await emailResponse.text())
+          // Still return success to user - they got the confirmation with your email/calendly
+        }
+      } catch (emailError) {
+        console.error('Email sending error:', emailError)
+        // Still return success to user
+      }
+    } else {
+      console.warn('RESEND_API_KEY not configured - email not sent')
+    }
     
     return c.json({ 
       success: true, 
       message: 'Form submitted successfully' 
     })
   } catch (error) {
+    console.error('Form processing error:', error)
     return c.json({ 
       success: false, 
       message: 'Error processing form' 
