@@ -198,9 +198,9 @@ app.get('/', (c) => {
                     <a href="#results" class="text-gray-700 hover:text-blue-700 transition font-medium">Results</a>
                     <a href="#process" class="text-gray-700 hover:text-blue-700 transition font-medium">Process</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-blue-700 transition font-medium">Testimonials</a>
-                    <button onclick="openModal()" class="cta-button text-white px-6 py-2 rounded-full font-semibold">
+                    <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="cta-button text-white px-6 py-2 rounded-full font-semibold inline-block">
                         Book Strategy Call
-                    </button>
+                    </a>
                 </div>
                 <div class="md:hidden">
                     <button onclick="toggleMobileMenu()" class="text-gray-700">
@@ -217,9 +217,9 @@ app.get('/', (c) => {
                 <a href="#results" class="block text-gray-700 hover:text-blue-700 font-medium">Results</a>
                 <a href="#process" class="block text-gray-700 hover:text-blue-700 font-medium">Process</a>
                 <a href="#testimonials" class="block text-gray-700 hover:text-blue-700 font-medium">Testimonials</a>
-                <button onclick="openModal()" class="cta-button text-white px-6 py-3 rounded-full font-semibold w-full">
+                <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="cta-button text-white px-6 py-3 rounded-full font-semibold w-full block text-center">
                     Book Strategy Call
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -257,10 +257,10 @@ app.get('/', (c) => {
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button onclick="openModal()" class="bg-white text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                        <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="bg-white text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl inline-block text-center">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Book Free Strategy Call
-                        </button>
+                        </a>
                         <a href="#results" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition text-center">
                             See Results
                         </a>
@@ -436,10 +436,10 @@ app.get('/', (c) => {
             </div>
             
             <div class="text-center mt-16">
-                <button onclick="openModal()" class="cta-button text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl">
+                <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="cta-button text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl inline-block">
                     Schedule Your Free Strategy Call
                     <i class="fas fa-arrow-right ml-2"></i>
-                </button>
+                </a>
                 <p class="text-gray-500 mt-4">30-minute call • No obligation • Tailored recommendations</p>
             </div>
         </div>
@@ -877,11 +877,17 @@ app.get('/', (c) => {
                 </div>
             </div>
             
-            <button onclick="openModal()" class="bg-white text-blue-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl mb-4">
-                <i class="fas fa-rocket mr-2"></i>
-                Book Your Free Strategy Call Now
-            </button>
-            <p class="text-sm text-gray-200">Available this week • 30-minute commitment • Immediate value</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="bg-white text-blue-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl inline-block">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Book Your Free Strategy Call Now
+                </a>
+                <button onclick="openModal()" class="border-2 border-white text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-blue-900 transition">
+                    <i class="fas fa-envelope mr-2"></i>
+                    Send Message
+                </button>
+            </div>
+            <p class="text-sm text-gray-200 mt-4">Available this week • 30-minute commitment • Immediate value</p>
         </div>
     </section>
 
@@ -891,7 +897,11 @@ app.get('/', (c) => {
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-2xl font-bold gradient-text mb-4">GSD Associates</h3>
-                    <p class="text-gray-400">Elite sales leadership for scaling SaaS companies</p>
+                    <p class="text-gray-400">Elite sales leadership for growing B2B companies</p>
+                    <p class="text-gray-400 mt-4">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <a href="mailto:gsdassociatesllc@gmail.com" class="hover:text-white transition">gsdassociatesllc@gmail.com</a>
+                    </p>
                 </div>
                 
                 <div>
@@ -931,8 +941,8 @@ app.get('/', (c) => {
         <div class="modal-content">
             <div class="gradient-bg text-white p-8 rounded-t-2xl">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h2 class="text-3xl font-bold mb-2">Book Your Free Strategy Call</h2>
-                <p class="text-gray-100">30 minutes that could transform your sales org</p>
+                <h2 class="text-3xl font-bold mb-2">Send Us a Message</h2>
+                <p class="text-gray-100">We'll respond within 24 hours or <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="underline hover:text-yellow-300">book a call now</a></p>
             </div>
             
             <form id="contactForm" class="p-8">
@@ -1048,14 +1058,14 @@ app.get('/', (c) => {
                 });
                 
                 if (response.ok) {
-                    alert("Thank you! We'll be in touch within 24 hours to schedule your strategy call.");
+                    alert("Thank you! We'll respond within 24 hours. Or book a call instantly at gsdassociatesmeeting.as.me");
                     closeModal();
                     e.target.reset();
                 } else {
-                    alert("Something went wrong. Please email us directly or try again.");
+                    alert("Something went wrong. Please email us directly at gsdassociatesllc@gmail.com or try again.");
                 }
             } catch (error) {
-                alert('Something went wrong. Please email us directly or try again.');
+                alert("Something went wrong. Please email us directly at gsdassociatesllc@gmail.com or try again.");
             } finally {
                 submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send My Request';
                 submitButton.disabled = false;
