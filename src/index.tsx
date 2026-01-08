@@ -14,8 +14,8 @@ app.get('/', (c) => {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GSD Associates - Elite Sales Leadership for Scaling SaaS Companies</title>
-    <meta name="description" content="Scale your SaaS revenue faster with executive-level sales leadership. Fractional VP of Sales & consulting to build pipeline, refine process, and drive measurable results.">
+    <title>GSD Associates - Elite Sales Leadership for Growing B2B Companies</title>
+    <meta name="description" content="Scale your B2B revenue faster with executive-level sales leadership. Fractional VP of Sales & consulting to build pipeline, refine process, and drive measurable results.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,11 +26,11 @@ app.get('/', (c) => {
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #f97316 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -46,7 +46,7 @@ app.get('/', (c) => {
         }
         
         .stat-card {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
         }
         
         @keyframes float {
@@ -60,11 +60,11 @@ app.get('/', (c) => {
         
         .testimonial-card {
             background: linear-gradient(145deg, #ffffff, #f0f0f0);
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #f97316;
         }
         
         .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -72,7 +72,7 @@ app.get('/', (c) => {
         
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
         }
         
         .cta-button::before {
@@ -93,7 +93,7 @@ app.get('/', (c) => {
         .service-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -161,13 +161,13 @@ app.get('/', (c) => {
         
         input:focus, textarea:focus {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.1);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.1);
         }
         
         .result-metric {
             font-size: 3rem;
             font-weight: 800;
-            color: #667eea;
+            color: #1e3a8a;
         }
         
         .pricing-card {
@@ -180,7 +180,7 @@ app.get('/', (c) => {
         }
         
         .featured-pricing {
-            border: 3px solid #667eea;
+            border: 3px solid #f97316;
             transform: scale(1.05);
         }
     </style>
@@ -194,10 +194,10 @@ app.get('/', (c) => {
                     <span class="text-2xl font-bold gradient-text">GSD Associates</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition font-medium">Services</a>
-                    <a href="#results" class="text-gray-700 hover:text-purple-600 transition font-medium">Results</a>
-                    <a href="#process" class="text-gray-700 hover:text-purple-600 transition font-medium">Process</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-purple-600 transition font-medium">Testimonials</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-700 transition font-medium">Services</a>
+                    <a href="#results" class="text-gray-700 hover:text-blue-700 transition font-medium">Results</a>
+                    <a href="#process" class="text-gray-700 hover:text-blue-700 transition font-medium">Process</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-blue-700 transition font-medium">Testimonials</a>
                     <button onclick="openModal()" class="cta-button text-white px-6 py-2 rounded-full font-semibold">
                         Book Strategy Call
                     </button>
@@ -213,10 +213,10 @@ app.get('/', (c) => {
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="px-4 py-4 space-y-3">
-                <a href="#services" class="block text-gray-700 hover:text-purple-600 font-medium">Services</a>
-                <a href="#results" class="block text-gray-700 hover:text-purple-600 font-medium">Results</a>
-                <a href="#process" class="block text-gray-700 hover:text-purple-600 font-medium">Process</a>
-                <a href="#testimonials" class="block text-gray-700 hover:text-purple-600 font-medium">Testimonials</a>
+                <a href="#services" class="block text-gray-700 hover:text-blue-700 font-medium">Services</a>
+                <a href="#results" class="block text-gray-700 hover:text-blue-700 font-medium">Results</a>
+                <a href="#process" class="block text-gray-700 hover:text-blue-700 font-medium">Process</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-blue-700 font-medium">Testimonials</a>
                 <button onclick="openModal()" class="cta-button text-white px-6 py-3 rounded-full font-semibold w-full">
                     Book Strategy Call
                 </button>
@@ -234,17 +234,17 @@ app.get('/', (c) => {
                         <span class="font-semibold">Executive-Level Sales Leadership</span>
                     </div>
                     <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
-                        Scale Your SaaS Revenue <span class="text-yellow-300">10X Faster</span>
+                        Scale Your B2B Revenue <span class="text-yellow-300">10X Faster</span>
                     </h1>
                     <p class="text-xl mb-8 text-gray-100 leading-relaxed">
-                        Get proven VP of Sales expertise without the full-time cost. Build pipeline, refine your process, and drive measurable results with fractional leadership that delivers.
+                        Get proven VP of Sales expertise without the full-time cost. Build pipeline, refine your process, and drive measurable results with fractional leadership that delivers—for SaaS, manufacturing, professional services, and beyond.
                     </p>
                     
                     <!-- Trust Indicators -->
                     <div class="flex flex-wrap gap-6 mb-10">
                         <div class="flex items-center">
                             <i class="fas fa-check-circle text-green-300 text-2xl mr-2"></i>
-                            <span>Startup to Enterprise</span>
+                            <span>All B2B Industries</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check-circle text-green-300 text-2xl mr-2"></i>
@@ -252,16 +252,16 @@ app.get('/', (c) => {
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-check-circle text-green-300 text-2xl mr-2"></i>
-                            <span>3-6 Month Engagements</span>
+                            <span>Flexible Engagements</span>
                         </div>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button onclick="openModal()" class="bg-white text-purple-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                        <button onclick="openModal()" class="bg-white text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Book Free Strategy Call
                         </button>
-                        <a href="#results" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-purple-700 transition text-center">
+                        <a href="#results" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-blue-900 transition text-center">
                             See Results
                         </a>
                     </div>
@@ -298,34 +298,33 @@ app.get('/', (c) => {
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-black mb-6">
-                You've Got Funding. Now What?
+                You Need to Scale Revenue. Fast.
             </h2>
             <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                Securing funding in today's market is incredibly difficult. You have a great product that could be the next unicorn. 
-                But scaling revenue requires more than ambition—it requires <span class="font-bold text-purple-600">proven sales leadership</span>.
+                Whether you've secured funding, won a major contract, or are entering new markets—scaling revenue requires more than effort. It requires <span class="font-bold text-blue-900">proven sales leadership</span>.
             </p>
             
             <div class="grid md:grid-cols-3 gap-8 mt-16">
                 <div class="bg-red-50 border-l-4 border-red-500 p-8 rounded-lg text-left">
                     <i class="fas fa-exclamation-triangle text-red-500 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3 text-gray-800">The Full-Time VP Problem</h3>
-                    <p class="text-gray-700">$200K+ salary, equity, and 6-12 months to find the right fit. Plus the risk of a bad hire that could cost you your Series A/B runway.</p>
+                    <p class="text-gray-700">$200K+ salary, equity, and 6-12 months to find the right fit. Plus the risk of a bad hire that could derail your growth plans and waste critical resources.</p>
                 </div>
                 
                 <div class="bg-yellow-50 border-l-4 border-yellow-500 p-8 rounded-lg text-left">
                     <i class="fas fa-clock text-yellow-500 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3 text-gray-800">The Speed Problem</h3>
-                    <p class="text-gray-700">Your board expects 3x ARR growth. Every month without a repeatable sales system is a month you're burning cash without the returns.</p>
+                    <p class="text-gray-700">Your stakeholders expect aggressive revenue growth. Every month without a repeatable sales system is lost opportunity and competitive disadvantage.</p>
                 </div>
                 
                 <div class="bg-blue-50 border-l-4 border-blue-500 p-8 rounded-lg text-left">
                     <i class="fas fa-question-circle text-blue-500 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3 text-gray-800">The Experience Problem</h3>
-                    <p class="text-gray-700">You need someone who's done it before—who has the playbook, the connections, and the battle scars from scaling B2B SaaS sales teams.</p>
+                    <p class="text-gray-700">You need someone who's done it before—who has the playbook, the connections, and the battle scars from scaling B2B sales across multiple industries.</p>
                 </div>
             </div>
             
-            <div class="mt-16 p-8 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl border-2 border-purple-200">
+            <div class="mt-16 p-8 bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl border-2 border-blue-200">
                 <h3 class="text-3xl font-bold mb-4 gradient-text">There's a Better Way</h3>
                 <p class="text-xl text-gray-700">Get executive-level sales leadership <strong>without the full-time overhead, risk, or 6-month search</strong>. Deploy proven expertise in 30 days, not 6 months.</p>
             </div>
@@ -370,13 +369,13 @@ app.get('/', (c) => {
                     
                     <div class="border-t pt-6">
                         <p class="text-sm text-gray-500 mb-2">Best for:</p>
-                        <p class="font-semibold text-purple-600">Seed to Series A companies building their first sales process</p>
+                        <p class="font-semibold text-orange-600">Growing companies building their first scalable sales process</p>
                     </div>
                 </div>
                 
                 <!-- Fractional VP -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl hover-lift featured-pricing">
-                    <div class="bg-yellow-400 text-purple-900 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
+                    <div class="bg-yellow-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
                         MOST POPULAR
                     </div>
                     <div class="service-icon">
@@ -402,7 +401,7 @@ app.get('/', (c) => {
                     
                     <div class="border-t pt-6">
                         <p class="text-sm text-gray-500 mb-2">Best for:</p>
-                        <p class="font-semibold text-purple-600">Series A/B companies with 5-15 person sales teams</p>
+                        <p class="font-semibold text-orange-600">Mid-market B2B companies with 5-20 person sales teams</p>
                     </div>
                 </div>
                 
@@ -431,7 +430,7 @@ app.get('/', (c) => {
                     
                     <div class="border-t pt-6">
                         <p class="text-sm text-gray-500 mb-2">Best for:</p>
-                        <p class="font-semibold text-purple-600">Established B2B companies refining their growth engine</p>
+                        <p class="font-semibold text-orange-600">Established B2B companies refining their growth engine</p>
                     </div>
                 </div>
             </div>
@@ -459,61 +458,61 @@ app.get('/', (c) => {
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 mb-16">
-                <div class="bg-gradient-to-br from-purple-50 to-indigo-50 p-10 rounded-2xl border-2 border-purple-200 hover-lift">
+                <div class="bg-gradient-to-br from-blue-50 to-slate-50 p-10 rounded-2xl border-2 border-blue-200 hover-lift">
                     <div class="flex items-center mb-6">
-                        <div class="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                        <div class="bg-blue-900 w-16 h-16 rounded-full flex items-center justify-center mr-4">
                             <i class="fas fa-rocket text-white text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-3xl font-black text-purple-700">Series A SaaS Company</h3>
+                            <h3 class="text-3xl font-black text-blue-900">Technology Company</h3>
                             <p class="text-gray-600">Fleet Management Software</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="bg-white p-4 rounded-lg">
                             <p class="text-sm text-gray-600 mb-1">Pipeline Growth (90 days)</p>
-                            <p class="text-3xl font-bold text-purple-600">+340%</p>
+                            <p class="text-3xl font-bold text-blue-900">+340%</p>
                         </div>
                         <div class="bg-white p-4 rounded-lg">
-                            <p class="text-sm text-gray-600 mb-1">SDR→AE Conversion Rate</p>
-                            <p class="text-3xl font-bold text-purple-600">+52%</p>
+                            <p class="text-sm text-gray-600 mb-1">Lead-to-Close Conversion</p>
+                            <p class="text-3xl font-bold text-blue-900">+52%</p>
                         </div>
                         <div class="bg-white p-4 rounded-lg">
                             <p class="text-sm text-gray-600 mb-1">Average Deal Size</p>
-                            <p class="text-3xl font-bold text-purple-600">+28%</p>
+                            <p class="text-3xl font-bold text-blue-900">+28%</p>
                         </div>
                     </div>
-                    <p class="mt-6 text-gray-700 italic border-l-4 border-purple-600 pl-4">
+                    <p class="mt-6 text-gray-700 italic border-l-4 border-orange-500 pl-4">
                         "Transformed our outbound motion from random activity to a predictable pipeline machine. We went from 15 qualified meetings/month to 65+ in 90 days."
                     </p>
                 </div>
                 
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-10 rounded-2xl border-2 border-blue-200 hover-lift">
+                <div class="bg-gradient-to-br from-slate-50 to-gray-50 p-10 rounded-2xl border-2 border-slate-300 hover-lift">
                     <div class="flex items-center mb-6">
-                        <div class="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                        <div class="bg-slate-700 w-16 h-16 rounded-full flex items-center justify-center mr-4">
                             <i class="fas fa-chart-line text-white text-2xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-3xl font-black text-blue-700">Series B SaaS Company</h3>
-                            <p class="text-gray-600">Workplace Safety Platform</p>
+                            <h3 class="text-3xl font-black text-slate-800">Industrial Services</h3>
+                            <p class="text-gray-600">Workplace Safety Solutions</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="bg-white p-4 rounded-lg">
                             <p class="text-sm text-gray-600 mb-1">Deal Cycle Reduction</p>
-                            <p class="text-3xl font-bold text-blue-600">-35%</p>
+                            <p class="text-3xl font-bold text-slate-700">-35%</p>
                         </div>
                         <div class="bg-white p-4 rounded-lg">
                             <p class="text-sm text-gray-600 mb-1">Win Rate Improvement</p>
-                            <p class="text-3xl font-bold text-blue-600">+44%</p>
+                            <p class="text-3xl font-bold text-slate-700">+44%</p>
                         </div>
                         <div class="bg-white p-4 rounded-lg">
                             <p class="text-sm text-gray-600 mb-1">Revenue Impact (6 months)</p>
-                            <p class="text-3xl font-bold text-blue-600">+$2.4M</p>
+                            <p class="text-3xl font-bold text-slate-700">+$2.4M</p>
                         </div>
                     </div>
-                    <p class="mt-6 text-gray-700 italic border-l-4 border-blue-600 pl-4">
-                        "Built our entire discovery framework from scratch. AEs stopped winging it, and our win rate nearly doubled in one quarter."
+                    <p class="mt-6 text-gray-700 italic border-l-4 border-orange-500 pl-4">
+                        "Built our entire discovery framework from scratch. Sales reps stopped winging it, and our win rate nearly doubled in one quarter."
                     </p>
                 </div>
             </div>
@@ -559,31 +558,31 @@ app.get('/', (c) => {
             
             <div class="space-y-8">
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift flex items-start">
-                    <div class="bg-purple-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
+                    <div class="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
                         1
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-3">Discovery & Diagnostic (Week 1-2)</h3>
                         <p class="text-gray-700 mb-4">Deep dive into your current state—pipeline analysis, rep shadowing, tech stack audit, ICP refinement. We identify the bottlenecks killing your conversion.</p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">Pipeline Audit</span>
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">Rep Shadowing</span>
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">ICP Analysis</span>
+                            <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">Pipeline Audit</span>
+                            <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">Rep Shadowing</span>
+                            <span class="bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">ICP Analysis</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift flex items-start">
-                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
+                    <div class="bg-slate-700 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
                         2
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-3">Framework & Playbook Build (Week 3-4)</h3>
                         <p class="text-gray-700 mb-4">Create your sales playbook—discovery framework, qualification criteria, stage definitions, handoff protocols. Everything documented and repeatable.</p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Discovery Framework</span>
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Qualification Checklist</span>
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">Stage Definitions</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">Discovery Framework</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">Qualification Checklist</span>
+                            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-semibold">Stage Definitions</span>
                         </div>
                     </div>
                 </div>
@@ -604,16 +603,16 @@ app.get('/', (c) => {
                 </div>
                 
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift flex items-start">
-                    <div class="bg-yellow-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
+                    <div class="bg-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center font-black text-2xl mr-6 flex-shrink-0">
                         4
                     </div>
                     <div>
                         <h3 class="text-2xl font-bold mb-3">Optimization & Scale (Month 2-6)</h3>
                         <p class="text-gray-700 mb-4">Iterate based on data. Refine messaging, optimize sequences, improve conversion points. Build the machine that runs without you having to micromanage.</p>
                         <div class="flex flex-wrap gap-3">
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">Data Analysis</span>
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">Message Testing</span>
-                            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">Conversion Optimization</span>
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">Data Analysis</span>
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">Message Testing</span>
+                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold">Conversion Optimization</span>
                         </div>
                     </div>
                 </div>
@@ -636,12 +635,12 @@ app.get('/', (c) => {
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="testimonial-card p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
+                        <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
                             JM
                         </div>
                         <div>
                             <p class="font-bold text-gray-800">Jason Mitchell</p>
-                            <p class="text-gray-600">CEO, Fleet Management SaaS</p>
+                            <p class="text-gray-600">CEO, Technology Company</p>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -652,19 +651,19 @@ app.get('/', (c) => {
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "We were stuck at $800K ARR for 8 months. GSD Associates came in, rebuilt our entire SDR motion, and we hit $2.1M ARR within 6 months. The ROI was immediate and undeniable."
+                        "We were stuck at $800K revenue for 8 months. GSD Associates came in, rebuilt our entire sales motion, and we hit $2.1M within 6 months. The ROI was immediate and undeniable."
                     </p>
-                    <p class="text-sm text-gray-500">Series A • 12-person sales team</p>
+                    <p class="text-sm text-gray-500">Growing tech company • 12-person sales team</p>
                 </div>
                 
                 <div class="testimonial-card p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
+                        <div class="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
                             SK
                         </div>
                         <div>
                             <p class="font-bold text-gray-800">Sarah Kim</p>
-                            <p class="text-gray-600">VP of Sales, Safety Tech Platform</p>
+                            <p class="text-gray-600">VP of Sales, Industrial Services</p>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -675,19 +674,19 @@ app.get('/', (c) => {
                         <i class="fas fa-star text-yellow-400"></i>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Our AEs were freestyling every discovery call. GSD built us a framework that's now part of our DNA. Win rate went from 22% to 39% in one quarter. Game-changing."
+                        "Our sales reps were freestyling every discovery call. GSD built us a framework that's now part of our DNA. Win rate went from 22% to 39% in one quarter. Game-changing."
                     </p>
-                    <p class="text-sm text-gray-500">Series B • 25-person sales org</p>
+                    <p class="text-sm text-gray-500">Mid-market company • 25-person sales org</p>
                 </div>
                 
                 <div class="testimonial-card p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
+                        <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
                             DA
                         </div>
                         <div>
                             <p class="font-bold text-gray-800">David Anderson</p>
-                            <p class="text-gray-600">Founder, B2B Marketing Platform</p>
+                            <p class="text-gray-600">Founder, Professional Services</p>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -700,17 +699,17 @@ app.get('/', (c) => {
                     <p class="text-gray-700 italic mb-4">
                         "I couldn't afford a full-time VP of Sales, but I couldn't afford NOT to have one either. The fractional model was perfect—elite expertise without the $250K+ commitment."
                     </p>
-                    <p class="text-sm text-gray-500">Seed stage • 5-person team</p>
+                    <p class="text-sm text-gray-500">Growing business • 5-person team</p>
                 </div>
                 
                 <div class="testimonial-card p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
+                        <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
                             MC
                         </div>
                         <div>
                             <p class="font-bold text-gray-800">Maria Chen</p>
-                            <p class="text-gray-600">CRO, Enterprise HR Software</p>
+                            <p class="text-gray-600">CRO, Enterprise Software</p>
                         </div>
                     </div>
                     <div class="mb-4">
@@ -723,7 +722,7 @@ app.get('/', (c) => {
                     <p class="text-gray-700 italic mb-4">
                         "Pipeline quality was our biggest issue—too many thin opps that went nowhere. GSD Associates tightened our qualification and handoff process. Now every opp in our CRM is real."
                     </p>
-                    <p class="text-sm text-gray-500">Series C • 40-person GTM team</p>
+                    <p class="text-sm text-gray-500">Enterprise company • 40-person GTM team</p>
                 </div>
             </div>
         </div>
@@ -744,17 +743,17 @@ app.get('/', (c) => {
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="bg-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                        <div class="bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-trophy text-white text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold">Proven Track Record</h3>
                     </div>
-                    <p class="text-gray-700">From startup to enterprise, we've been there. Whether you're scaling a startup or expanding into new markets, we've done it before and know what works.</p>
+                    <p class="text-gray-700">From startups to enterprise, across tech, manufacturing, professional services, and more. Whether you're scaling rapidly or entering new markets, we've done it before and know what works.</p>
                 </div>
                 
                 <div class="bg-white p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="bg-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                        <div class="bg-slate-700 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-sync text-white text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold">End-to-End Capability</h3>
@@ -764,17 +763,17 @@ app.get('/', (c) => {
                 
                 <div class="bg-white p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="bg-green-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                        <div class="bg-orange-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-target text-white text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold">Results-Oriented</h3>
                     </div>
-                    <p class="text-gray-700">When stakes are high (Series A/B, enterprise deals, scaling teams), you need action, accountability, and measurable outcomes—not just advice.</p>
+                    <p class="text-gray-700">When stakes are high (major contracts, aggressive growth targets, market expansion), you need action, accountability, and measurable outcomes—not just advice.</p>
                 </div>
                 
                 <div class="bg-white p-8 rounded-2xl shadow-lg">
                     <div class="flex items-center mb-4">
-                        <div class="bg-indigo-600 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                        <div class="bg-blue-700 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
                             <i class="fas fa-chart-pie text-white text-xl"></i>
                         </div>
                         <h3 class="text-xl font-bold">Flexible & Scalable</h3>
@@ -798,7 +797,7 @@ app.get('/', (c) => {
                 <div class="bg-gray-50 p-6 rounded-xl hover-lift cursor-pointer" onclick="toggleFAQ(this)">
                     <div class="flex justify-between items-center">
                         <h3 class="text-xl font-bold text-gray-800">How is fractional different from hiring a full-time VP of Sales?</h3>
-                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                        <i class="fas fa-chevron-down text-orange-600 transition-transform"></i>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-700">
                         <p>A fractional VP of Sales gives you executive-level expertise at 30-40% of the cost of a full-time hire. You get someone who's done it before, without the 6-month hiring process, $200K+ salary, equity, and risk of a bad fit. Perfect for companies that need VP-level strategy and execution but aren't ready for or can't afford a full-time executive.</p>
@@ -808,17 +807,17 @@ app.get('/', (c) => {
                 <div class="bg-gray-50 p-6 rounded-xl hover-lift cursor-pointer" onclick="toggleFAQ(this)">
                     <div class="flex justify-between items-center">
                         <h3 class="text-xl font-bold text-gray-800">What size companies do you work with?</h3>
-                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                        <i class="fas fa-chevron-down text-orange-600 transition-transform"></i>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-700">
-                        <p>We work with B2B SaaS and tech companies from seed stage through Series C. Typically, our clients have 5-50 person sales teams and are looking to scale from $500K to $20M+ ARR. If you have product-market fit and need to build a repeatable sales engine, we can help.</p>
+                        <p>We work with B2B companies across industries—technology, manufacturing, professional services, healthcare, financial services, and more. Typically, our clients have 5-50 person sales teams and are scaling their revenue. If you need to build or optimize a repeatable sales engine, we can help.</p>
                     </div>
                 </div>
                 
                 <div class="bg-gray-50 p-6 rounded-xl hover-lift cursor-pointer" onclick="toggleFAQ(this)">
                     <div class="flex justify-between items-center">
                         <h3 class="text-xl font-bold text-gray-800">How long does a typical engagement last?</h3>
-                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                        <i class="fas fa-chevron-down text-orange-600 transition-transform"></i>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-700">
                         <p>Most fractional VP engagements run 3-6 months. Consulting projects can be 1-3 months depending on scope. We start seeing measurable impact within the first 30 days, with full transformation typically achieved by month 3-4.</p>
@@ -828,7 +827,7 @@ app.get('/', (c) => {
                 <div class="bg-gray-50 p-6 rounded-xl hover-lift cursor-pointer" onclick="toggleFAQ(this)">
                     <div class="flex justify-between items-center">
                         <h3 class="text-xl font-bold text-gray-800">What if we already have a sales leader?</h3>
-                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                        <i class="fas fa-chevron-down text-orange-600 transition-transform"></i>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-700">
                         <p>Perfect! We often work alongside existing sales leaders to build out specific capabilities—like SDR systems, discovery frameworks, or enterprise sales motions. We can also provide coaching and mentorship to help your current leader level up their skills.</p>
@@ -838,7 +837,7 @@ app.get('/', (c) => {
                 <div class="bg-gray-50 p-6 rounded-xl hover-lift cursor-pointer" onclick="toggleFAQ(this)">
                     <div class="flex justify-between items-center">
                         <h3 class="text-xl font-bold text-gray-800">How quickly can you start?</h3>
-                        <i class="fas fa-chevron-down text-purple-600 transition-transform"></i>
+                        <i class="fas fa-chevron-down text-orange-600 transition-transform"></i>
                     </div>
                     <div class="faq-answer hidden mt-4 text-gray-700">
                         <p>Typically within 2-3 weeks from our initial strategy call. We move fast because we know you're racing against your runway and board expectations.</p>
@@ -878,7 +877,7 @@ app.get('/', (c) => {
                 </div>
             </div>
             
-            <button onclick="openModal()" class="bg-white text-purple-700 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl mb-4">
+            <button onclick="openModal()" class="bg-white text-blue-900 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition shadow-2xl mb-4">
                 <i class="fas fa-rocket mr-2"></i>
                 Book Your Free Strategy Call Now
             </button>
@@ -939,22 +938,22 @@ app.get('/', (c) => {
             <form id="contactForm" class="p-8">
                 <div class="mb-6">
                     <label class="block text-gray-700 font-semibold mb-2">Full Name *</label>
-                    <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none">
+                    <input type="text" name="name" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
                 </div>
                 
                 <div class="mb-6">
                     <label class="block text-gray-700 font-semibold mb-2">Business Email *</label>
-                    <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none">
+                    <input type="email" name="email" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
                 </div>
                 
                 <div class="mb-6">
                     <label class="block text-gray-700 font-semibold mb-2">Company Name *</label>
-                    <input type="text" name="company" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none">
+                    <input type="text" name="company" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
                 </div>
                 
                 <div class="mb-6">
-                    <label class="block text-gray-700 font-semibold mb-2">Current ARR *</label>
-                    <select name="arr" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none">
+                    <label class="block text-gray-700 font-semibold mb-2">Annual Revenue *</label>
+                    <select name="arr" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
                         <option value="">Select range...</option>
                         <option value="<500K">Less than $500K</option>
                         <option value="500K-1M">$500K - $1M</option>
@@ -966,7 +965,7 @@ app.get('/', (c) => {
                 
                 <div class="mb-6">
                     <label class="block text-gray-700 font-semibold mb-2">Sales Team Size *</label>
-                    <select name="teamSize" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none">
+                    <select name="teamSize" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
                         <option value="">Select size...</option>
                         <option value="1-5">1-5 people</option>
                         <option value="6-10">6-10 people</option>
@@ -978,7 +977,7 @@ app.get('/', (c) => {
                 
                 <div class="mb-6">
                     <label class="block text-gray-700 font-semibold mb-2">Biggest Challenge *</label>
-                    <textarea name="challenge" rows="4" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none" placeholder="What's the #1 thing holding your sales team back?"></textarea>
+                    <textarea name="challenge" rows="4" required class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="What's the #1 thing holding your sales team back?"></textarea>
                 </div>
                 
                 <button type="submit" class="cta-button text-white px-8 py-4 rounded-full font-bold text-lg w-full">
