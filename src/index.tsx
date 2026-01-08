@@ -117,17 +117,20 @@ app.get('/', (c) => {
             top: 0;
             width: 100%;
             height: 100%;
+            overflow-y: auto;
             background-color: rgba(0, 0, 0, 0.7);
             animation: fadeIn 0.3s ease;
         }
         
         .modal-content {
             background-color: white;
-            margin: 5% auto;
+            margin: 2% auto;
             padding: 0;
             border-radius: 20px;
             width: 90%;
             max-width: 600px;
+            max-height: 95vh;
+            overflow-y: auto;
             animation: slideIn 0.3s ease;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
