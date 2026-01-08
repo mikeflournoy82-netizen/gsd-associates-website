@@ -1019,10 +1019,12 @@ app.get('/', (c) => {
         // FAQ toggle
         function toggleFAQ(element) {
             const answer = element.querySelector('.faq-answer');
-            const icon = element.querySelector('i');
+            const icon = element.querySelector('.fa-chevron-down');
             
-            answer.classList.toggle('hidden');
-            icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            if (answer && icon) {
+                answer.classList.toggle('hidden');
+                icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
         }
         
         // Form submission
