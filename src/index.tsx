@@ -1048,11 +1048,11 @@ app.get('/', (c) => {
                 });
                 
                 if (response.ok) {
-                    alert('Thank you! We\'ll be in touch within 24 hours to schedule your strategy call.');
+                    alert("Thank you! We'll be in touch within 24 hours to schedule your strategy call.");
                     closeModal();
                     e.target.reset();
                 } else {
-                    alert('Something went wrong. Please email us directly or try again.');
+                    alert("Something went wrong. Please email us directly or try again.");
                 }
             } catch (error) {
                 alert('Something went wrong. Please email us directly or try again.');
