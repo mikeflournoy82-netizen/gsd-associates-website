@@ -216,6 +216,8 @@ app.get('/', (c) => {
                     <a href="#results" class="text-gray-700 hover:text-blue-700 transition font-medium">Results</a>
                     <a href="#process" class="text-gray-700 hover:text-blue-700 transition font-medium">Process</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-blue-700 transition font-medium">Testimonials</a>
+                    <a href="/blog" class="text-gray-700 hover:text-blue-700 transition font-medium">Blog</a>
+                    <a href="/about" class="text-gray-700 hover:text-blue-700 transition font-medium">About</a>
                     <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="cta-button text-white px-6 py-2 rounded-full font-semibold inline-block">
                         Book Strategy Call
                     </a>
@@ -235,6 +237,8 @@ app.get('/', (c) => {
                 <a href="#results" class="block text-gray-700 hover:text-blue-700 font-medium">Results</a>
                 <a href="#process" class="block text-gray-700 hover:text-blue-700 font-medium">Process</a>
                 <a href="#testimonials" class="block text-gray-700 hover:text-blue-700 font-medium">Testimonials</a>
+                <a href="/blog" class="block text-gray-700 hover:text-blue-700 font-medium">Blog</a>
+                <a href="/about" class="block text-gray-700 hover:text-blue-700 font-medium">About</a>
                 <a href="https://gsdassociatesmeeting.as.me/" target="_blank" class="cta-button text-white px-6 py-3 rounded-full font-semibold w-full block text-center">
                     Book Strategy Call
                 </a>
@@ -1356,6 +1360,182 @@ function blogPost(slug: string, title: string, category: string, date: string, r
 
 // ─── BLOG ROUTES ──────────────────────────────────────────────────────────────
 
+app.get('/blog', (c) => c.html(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Leadership Blog - GSD Associates</title>
+    <meta name="description" content="Practical sales leadership insights for B2B founders and CEOs. Pipeline management, cold email, fractional VP of Sales, and more.">
+    <link rel="canonical" href="https://www.gsdassociates.net/blog">
+    <meta property="og:title" content="Sales Leadership Blog - GSD Associates">
+    <meta property="og:description" content="Practical sales leadership insights for B2B founders and CEOs.">
+    <meta property="og:url" content="https://www.gsdassociates.net/blog">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .cta-button { background: linear-gradient(135deg, #f97316, #ea580c); }
+        .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed w-full bg-white shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="text-2xl font-bold gradient-text">GSD Associates</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-gray-700 hover:text-blue-700 font-medium">Home</a>
+                    <a href="/blog" class="text-blue-700 font-bold border-b-2 border-blue-700">Blog</a>
+                    <a href="/about" class="text-gray-700 hover:text-blue-700 font-medium">About</a>
+                    <a href="https://calendly.com/gsdassociatesllc/30min" target="_blank" class="cta-button text-white px-6 py-2 rounded-full font-semibold inline-block">Book Strategy Call</a>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="document.getElementById('blogMobileMenu').classList.toggle('hidden')" class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="blogMobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="/" class="block text-gray-700 hover:text-blue-700 font-medium">Home</a>
+                <a href="/blog" class="block text-blue-700 font-bold">Blog</a>
+                <a href="/about" class="block text-gray-700 hover:text-blue-700 font-medium">About</a>
+                <a href="https://calendly.com/gsdassociatesllc/30min" target="_blank" class="cta-button text-white px-6 py-3 rounded-full font-semibold w-full block text-center">Book Strategy Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-28 pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-orange-500 font-bold uppercase tracking-widest mb-3">Insights & Resources</p>
+                <h1 class="text-5xl font-black text-gray-900 mb-4">Sales Leadership <span class="gradient-text">Blog</span></h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Practical tactics for B2B founders and CEOs ready to scale revenue without guessing.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <a href="/blog/how-much-does-fractional-vp-of-sales-cost" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Pricing</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">How Much Does a Fractional VP of Sales Cost?</h2>
+                        <p class="text-gray-500 text-sm mb-4">The real numbers — from day rates to monthly retainers. Know exactly what to budget.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>8 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/signs-you-need-fractional-vp-of-sales" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Leadership</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">7 Signs You Need a Fractional VP of Sales</h2>
+                        <p class="text-gray-500 text-sm mb-4">Pipeline stalled? Reps underperforming? Here are the 7 red flags founders ignore too long.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>9 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/b2b-sales-pipeline-management" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Pipeline</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">B2B Sales Pipeline Management: The Complete Guide</h2>
+                        <p class="text-gray-500 text-sm mb-4">Build a pipeline that converts. Stage definitions, velocity tracking, and how to fix leaks.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>12 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/saas-sales-process" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">SaaS</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">The SaaS Sales Process That Closes More Deals</h2>
+                        <p class="text-gray-500 text-sm mb-4">A repeatable 7-stage process built for SaaS — from first touch to expansion revenue.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>10 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/how-to-build-b2b-sales-team" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Team Building</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">How to Build a B2B Sales Team from Scratch</h2>
+                        <p class="text-gray-500 text-sm mb-4">AE or SDR first? What comp plan? How to hire, onboard, and scale a team that actually performs.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>11 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/cold-email-b2b" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Cold Outreach</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">B2B Cold Email That Actually Gets Replies</h2>
+                        <p class="text-gray-500 text-sm mb-4">The 5-step framework behind cold emails that open, reply, and convert to booked meetings.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>9 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/sales-discovery-call-framework" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Discovery</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">The Sales Discovery Call Framework That Closes Deals</h2>
+                        <p class="text-gray-500 text-sm mb-4">Stop pitching on the first call. Use this framework to uncover pain, build urgency, and win.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>10 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/fractional-vp-sales-vs-sales-consultant" class="bg-white rounded-2xl shadow-md overflow-hidden card-hover block">
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-700 p-6 h-36 flex items-end">
+                        <span class="text-orange-300 text-xs font-bold uppercase tracking-widest">Comparison</span>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-lg font-bold text-gray-900 mb-2 leading-snug">Fractional VP of Sales vs. Sales Consultant: Which Do You Need?</h2>
+                        <p class="text-gray-500 text-sm mb-4">Know the difference before you hire. One runs your team, one advises it — here is how to choose.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>March 2026</span><span>7 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="mt-16 bg-gradient-to-r from-blue-900 to-blue-700 rounded-3xl p-10 text-center text-white">
+                <h2 class="text-3xl font-black mb-3">Ready to Fix Your Sales?</h2>
+                <p class="text-blue-200 text-lg mb-6">30 minutes. No pitch. Just a straight answer on what your sales team needs.</p>
+                <a href="https://calendly.com/gsdassociatesllc/30min" target="_blank" class="cta-button text-white px-10 py-4 rounded-full font-bold text-lg inline-block">Book a Free Strategy Call</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>`));
+
 app.get('/blog/how-much-does-fractional-vp-of-sales-cost', (c) => c.html(blogPost(
   'how-much-does-fractional-vp-of-sales-cost',
   'How Much Does a Fractional VP of Sales Cost? (2026 Pricing Guide)',
@@ -1470,7 +1650,7 @@ app.get('/blog/saas-sales-process', (c) => c.html(blogPost(
 
 app.get('/blog/how-to-build-b2b-sales-team', (c) => c.html(blogPost(
   'how-to-build-b2b-sales-team',
-  'How to Build a B2B Sales Team from Scratch (The Founder's Playbook)',
+  "How to Build a B2B Sales Team from Scratch (The Founder's Playbook)",
   'Team Building', 'March 2026', '11 min read',
   'Hire AE or SDR first? What comp plan? How do you onboard? When do you add a manager? The complete founder guide to building a B2B sales team that actually scales.',
   `<p>Building a B2B sales team is one of the most consequential things a founder does — and one of the most commonly botched. The wrong hire at the wrong time costs you runway, market opportunity, and 6–12 months you will never get back.</p>
