@@ -30,6 +30,8 @@ app.get('/', (c) => {
     
     <!-- Rb2B Identification Script -->
     <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("GNLKQHPL136Q");</script>
+    <!-- Apollo Website Visitor Tracker -->
+    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"69c9d564bfeb6d001506f186"})},document.head.appendChild(o)}initApollo();</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
@@ -1206,6 +1208,8 @@ app.get('/about', (c) => {
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>* { font-family: 'Inter', sans-serif; line-height: 1.7; } .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); } .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #f97316 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; } .cta-box { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); } .principle-card { background: white; border-left: 4px solid #2563eb; border-radius: 0 12px 12px 0; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }</style>
+    <!-- Apollo Website Visitor Tracker -->
+    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"69c9d564bfeb6d001506f186"})},document.head.appendChild(o)}initApollo();</script>
 </head>
 <body class="bg-gray-50">
     <nav class="fixed w-full bg-white shadow-lg z-50">
@@ -1308,6 +1312,8 @@ function blogPost(slug: string, title: string, category: string, date: string, r
     <meta name="twitter:description" content="${metaDesc}">
     <meta name="twitter:site" content="@GSDAssociates">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"${title}","author":{"@type":"Person","name":"Michael Flournoy"},"publisher":{"@type":"Organization","name":"GSD Associates","url":"https://www.gsdassociates.net"},"datePublished":"2026-03-01","description":"${metaDesc}"}</script>
+    <!-- Apollo Website Visitor Tracker -->
+    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"69c9d564bfeb6d001506f186"})},document.head.appendChild(o)}initApollo();</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1381,6 +1387,8 @@ app.get('/blog', (c) => c.html(`<!DOCTYPE html>
         .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
         .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
     </style>
+    <!-- Apollo Website Visitor Tracker -->
+    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"69c9d564bfeb6d001506f186"})},document.head.appendChild(o)}initApollo();</script>
 </head>
 <body class="bg-gray-50">
     <nav class="fixed w-full bg-white shadow-lg z-50">
