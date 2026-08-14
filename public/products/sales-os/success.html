@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics 4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+      gtag('config', 'AW-17945394532');
+    </script>
+
+    <!-- Purchase Conversion Tracking (fires on page load) -->
+    <script>
+    window.addEventListener('load', function() {
+        var productName = 'Sales OS';
+        var productValue = 47;
+        var txnId = productName + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+
+        // Google Ads Purchase conversion (using existing lead-form label for now — Michael will update to product-specific label once created)
+        if(window.gtag){
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17945394532/60bMCLKG75ccEOT6g-1C',
+                'value': productValue,
+                'currency': 'USD',
+                'transaction_id': txnId
+            });
+
+            // GA4 Purchase event (this is what Google Ads uses for auto-import optimization)
+            gtag('event', 'purchase', {
+                transaction_id: txnId,
+                value: productValue,
+                currency: 'USD',
+                items: [{
+                    item_id: productName,
+                    item_name: productName,
+                    price: productValue,
+                    quantity: 1
+                }]
+            });
+
+            // Additional standard events
+            gtag('event', 'product_purchase', {
+                event_category: 'ecommerce',
+                event_label: productName,
+                value: productValue,
+                currency: 'USD'
+            });
+        }
+
+        // Meta Pixel Purchase event
+        try { if(window.fbq){ fbq('track', 'Purchase', {value: productValue, currency: 'USD', content_name: productName}); } } catch(err) {}
+    });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Sales OS | GSD Associates</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script id="hs-script-loader" src="//js-na1.hs-scripts.com/22350871.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; line-height: 1.6; color: #1F2937; background: #F9FAFB; }
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #ea580c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .container { max-width: 600px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+        .success-box { background: white; border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 2rem 0; }
+        .success-icon { font-size: 4rem; margin-bottom: 1rem; }
+        h1 { color: #1E3A8A; margin-bottom: 1rem; font-size: 2rem; }
+        .subtext { color: #666; margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-button { background: #EA580C; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; text-decoration: none; display: inline-block; margin: 1rem; cursor: pointer; font-size: 1rem; font-weight: 600; transition: background 0.3s; }
+        .cta-button:hover { background: #D94706; }
+        .cta-button.secondary { background: #1E3A8A; }
+        .cta-button.secondary:hover { background: #152654; }
+        .info-box { background: #F0F9FF; border-left: 4px solid #EA580C; padding: 1.5rem; margin: 1.5rem 0; text-align: left; border-radius: 8px; }
+        .info-box h3 { color: #1E3A8A; margin-bottom: 0.5rem; }
+        .info-box p { color: #555; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .info-list { list-style: none; padding: 0; }
+        .info-list li { padding: 0.5rem 0; }
+        footer { text-align: center; padding: 2rem; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <div class="success-icon">🚀</div>
+            <h1>Welcome to Sales OS!</h1>
+            <p class="subtext">Your monthly membership is active. Check your email for login credentials.</p>
+            
+            <div class="info-box">
+                <h3>You Now Have Access To:</h3>
+                <ul class="info-list">
+                    <li>✓ Video training library (updated monthly)</li>
+                    <li>✓ Sales templates & frameworks</li>
+                    <li>✓ Private founder community</li>
+                    <li>✓ Monthly Q&A calls with me</li>
+                    <li>✓ First month access immediately</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Get Started Now</h3>
+                <p>Check your email for your login link to the member portal.</p>
+                <p style="margin-top: 1rem;"><strong>Don't see it?</strong> Check your spam folder or reply to this page.</p>
+            </div>
+
+            <button class="cta-button" onclick="window.location.href='mailto:<a href="mailto:gsdassociatesllc@gmail.com" class="text-orange-400 hover:text-orange-300 font-semibold">gsdassociatesllc@gmail.com</a>?subject=Sales%20OS%20Access'">Email for Access Help</button>
+            <button class="cta-button secondary" onclick="window.location.href='https://calendly.com/gsdassociatesllc/30min?utm_source=sales-os-success'">Schedule Office Hours</button>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1rem; background: #FFF8E7; border-radius: 8px; border-left: 4px solid #EA580C;">
+            <p><strong>💡 Pro Tip:</strong> Add <a href="mailto:gsdassociatesllc@gmail.com" class="text-orange-400 hover:text-orange-300 font-semibold">gsdassociatesllc@gmail.com</a> to your contacts so our emails don't end up in spam.</p>
+        </div>
+
+        <div style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+            <p>See you in the community!</p>
+        </div>
+    </div>
+
+    <script>
+        // Track conversion in GA4
+        if (window.gtag) {
+            gtag('event', 'purchase', {
+                event_category: 'ecommerce',
+                event_label: 'sales_os',
+                value: 47,
+                currency: 'USD',
+                transaction_type: 'subscription'
+            });
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 GSD Associates. All rights reserved.</p>
+    </footer>
+    <script>
+    // Handle smooth scroll to anchors on page load
+    window.addEventListener("load", function() {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+    </script>
+  <script src="/gsd-book-modal.js" defer></script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body>
+</html>

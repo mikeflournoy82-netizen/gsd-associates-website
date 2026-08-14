@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics 4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+      gtag('config', 'AW-17945394532');
+    </script>
+
+    <!-- Purchase Conversion Tracking (fires on page load) -->
+    <script>
+    window.addEventListener('load', function() {
+        var productName = 'Sales Audit';
+        var productValue = 497;
+        var txnId = productName + '-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+
+        // Google Ads Purchase conversion (using existing lead-form label for now — Michael will update to product-specific label once created)
+        if(window.gtag){
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17945394532/60bMCLKG75ccEOT6g-1C',
+                'value': productValue,
+                'currency': 'USD',
+                'transaction_id': txnId
+            });
+
+            // GA4 Purchase event (this is what Google Ads uses for auto-import optimization)
+            gtag('event', 'purchase', {
+                transaction_id: txnId,
+                value: productValue,
+                currency: 'USD',
+                items: [{
+                    item_id: productName,
+                    item_name: productName,
+                    price: productValue,
+                    quantity: 1
+                }]
+            });
+
+            // Additional standard events
+            gtag('event', 'product_purchase', {
+                event_category: 'ecommerce',
+                event_label: productName,
+                value: productValue,
+                currency: 'USD'
+            });
+        }
+
+        // Meta Pixel Purchase event
+        try { if(window.fbq){ fbq('track', 'Purchase', {value: productValue, currency: 'USD', content_name: productName}); } } catch(err) {}
+    });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Sales Audit | GSD Associates</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script id="hs-script-loader" src="//js-na1.hs-scripts.com/22350871.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; line-height: 1.6; color: #1F2937; background: #F9FAFB; }
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #ea580c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .container { max-width: 600px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+        .success-box { background: white; border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 2rem 0; }
+        .success-icon { font-size: 4rem; margin-bottom: 1rem; }
+        h1 { color: #1E3A8A; margin-bottom: 1rem; font-size: 2rem; }
+        .subtext { color: #666; margin-bottom: 2rem; font-size: 1.1rem; }
+        .cta-button { background: #EA580C; color: white; padding: 1rem 2rem; border: none; border-radius: 8px; text-decoration: none; display: inline-block; margin: 1rem; cursor: pointer; font-size: 1rem; font-weight: 600; transition: background 0.3s; }
+        .cta-button:hover { background: #D94706; }
+        .info-box { background: #F0F9FF; border-left: 4px solid #EA580C; padding: 1.5rem; margin: 1.5rem 0; text-align: left; border-radius: 8px; }
+        .info-box h3 { color: #1E3A8A; margin-bottom: 0.5rem; }
+        .info-box p { color: #555; font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .countdown { font-size: 0.9rem; color: #999; margin-top: 1rem; }
+        footer { text-align: center; padding: 2rem; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <div class="success-icon">✅</div>
+            <h1>Order Confirmed!</h1>
+            <p class="subtext">Thank you for purchasing the Sales Audit.</p>
+            
+            <div class="info-box">
+                <h3>What Happens Next</h3>
+                <p>✓ You'll receive a welcome email with your questionnaire link</p>
+                <p>✓ Complete the questionnaire (takes ~10 minutes)</p>
+                <p>✓ I'll deliver your 10-page custom audit within 48 hours</p>
+                <p>✓ We'll schedule your 30-minute strategy call</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Next Step: Book Your Call</h3>
+                <p>Click below to schedule your 30-minute strategy call.</p>
+            </div>
+
+            <button class="cta-button" onclick="window.location.href='https://calendly.com/gsdassociatesllc/30min?utm_source=sales-audit-success'">Book Your Strategy Call</button>
+            
+            <div class="countdown">
+                <p>Redirecting to Calendly in <span id="timer">5</span> seconds...</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+            <p>Questions? Email <strong><a href="mailto:gsdassociatesllc@gmail.com" class="text-orange-400 hover:text-orange-300 font-semibold">gsdassociatesllc@gmail.com</a></strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect to Calendly after 5 seconds
+        let count = 5;
+        const timerEl = document.getElementById('timer');
+        
+        const interval = setInterval(() => {
+            count--;
+            timerEl.textContent = count;
+            if (count <= 0) {
+                clearInterval(interval);
+                window.location.href = 'https://calendly.com/gsdassociatesllc/30min?utm_source=sales-audit-success';
+            }
+        }, 1000);
+
+        // Track conversion in GA4
+        if (window.gtag) {
+            gtag('event', 'purchase', {
+                event_category: 'ecommerce',
+                event_label: 'sales_audit',
+                value: 497,
+                currency: 'USD'
+            });
+        }
+
+        // HubSpot tracking
+        if (window.hbspt) {
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "22350871",
+                formId: "dummy",
+                onFormSubmit: function() {
+                    // Silently track
+                }
+            });
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 GSD Associates. All rights reserved.</p>
+    </footer>
+    <script>
+    // Handle smooth scroll to anchors on page load
+    window.addEventListener("load", function() {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+    </script>
+  <script src="/gsd-book-modal.js" defer></script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body>
+</html>
