@@ -1,9 +1,6 @@
-name = "gsdsitemap"
-main = "dist/_worker.js"
+# Cloudflare Pages configuration for gsd-associates-website
+name = "gsd-associates-website"
 compatibility_date = "2026-03-25"
 
-[assets]
-directory = "dist"
-
-# Cloudflare Pages configuration
+# Pages-specific: Tell Pages where the built files are
 pages_build_output_dir = "public"
