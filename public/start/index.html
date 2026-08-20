@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Free 30-Min Sales Strategy Call | GSD Associates</title>
+    <meta name="description" content="Scale your B2B revenue 10x faster. Book a free 30-minute strategy call with Michael Flournoy — the Fractional VP of Sales who scaled Whip Around to a $100M acquisition. No pitch, no obligation.">
+
+    <!-- Google Analytics 4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+      gtag('config', 'AW-17945394532');
+      // A/B TEST: CTA color experiment on /start/ page (started 2026-08-05)
+      // Track this in GA4: Reports > Explore > add "cta_color_test" custom dimension
+      gtag('set', 'user_properties', { cta_color_test: 'green_v1' });
+      gtag('event', 'ab_test_variant', { experiment_id: 'start_cta_color', variant: 'green_v1', event_category: 'ab_test' });
+    </script>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <noscript><link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <style>
+        * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #ea580c 100%); }
+        /* A/B TEST: /start/ page CTAs switched to GREEN on 2026-08-05 to test conversion vs. orange baseline */
+        .cta-button { background: linear-gradient(135deg, #16a34a 0%, #15803d 100%); transition: all 0.3s ease; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,115,22,0.4); }
+        .stat-card { background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); }
+        .trust-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+        .scarcity-badge { background: rgba(239,68,68,0.1); border: 1.5px solid rgba(239,68,68,0.3); }
+        .pulse-ring { animation: pulse-glow 2.5s infinite; }
+        @keyframes pulse-glow { 0%{box-shadow:0 0 0 0 rgba(249,115,22,0.7);}70%{box-shadow:0 0 0 12px rgba(249,115,22,0);}100%{box-shadow:0 0 0 0 rgba(249,115,22,0);} }
+
+        /* Form styles */
+        .booking-card { background: #fff; border-radius: 20px; box-shadow: 0 25px 60px rgba(0,0,0,0.15); overflow: hidden; }
+        .booking-header { background: #1e3a8a; padding: 20px 24px; }
+        .form-input {
+            width: 100%; padding: 14px 16px; border: 2px solid #e5e7eb;
+            border-radius: 12px; font-size: 15px; color: #111827;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none; box-sizing: border-box;
+        }
+        .form-input:focus { border-color: #1e3a8a; box-shadow: 0 0 0 3px rgba(30,58,138,0.1); }
+        .form-input::placeholder { color: #9ca3af; }
+        select.form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+        textarea.form-input { resize: none; }
+        .submit-btn {
+            width: 100%; background: linear-gradient(135deg, #16a34a, #15803d);
+            color: white; font-weight: 800; font-size: 17px;
+            padding: 16px; border: none; border-radius: 12px; cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: pulse-glow 2.5s infinite;
+        }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(249,115,22,0.4); }
+        .submit-btn:active { transform: translateY(0); }
+        .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; animation: none; }
+
+        /* Progress states */
+        #form-step { display: block; }
+        #loading-step { display: none; text-align: center; padding: 60px 24px; }
+        #success-step { display: none; text-align: center; padding: 40px 24px; }
+
+        .spinner {
+            width: 48px; height: 48px; border: 4px solid #e5e7eb;
+            border-top-color: #ea580c; border-radius: 50%;
+            animation: spin 0.8s linear infinite; margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .checkmark { font-size: 56px; margin-bottom: 16px; }
+
+        /* Micro-copy trust row */
+        .trust-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 6px; color: #6b7280; font-size: 13px; }
+        .trust-item i { color: #f97316; }
+
+        label { display: block; font-weight: 600; color: #374151; font-size: 14px; margin-bottom: 6px; }
+        label span { color: #ef4444; }
+    </style>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.gsdassociates.net/start/">
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gsdassociates.net/start/">
+    <meta property="og:title" content="Book a Free 30-Min Sales Strategy Call | GSD Associates">
+    <meta property="og:description" content="Scale your B2B revenue 10x faster. Book a free 30-minute strategy call with Michael Flournoy — the Fractional VP of Sales who scaled Whip Around to a $100M acquisition. No pitch, no obligation.">
+    <meta property="og:image" content="https://www.gsdassociates.net/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GSD Associates">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book a Free 30-Min Sales Strategy Call | GSD Associates">
+    <meta name="twitter:description" content="Scale your B2B revenue 10x faster. Book a free 30-minute strategy call with Michael Flournoy — the Fractional VP of Sales who scaled Whip Around to a $100M acquisition. No pitch, no obligation.">
+    <meta name="twitter:image" content="https://www.gsdassociates.net/og-image.jpg">
+
+    <!-- Calendly Conversion Tracking -->
+    <script src="/calendly-conversion.js" defer></script>
+
+</head>
+<body class="bg-gray-50">
+
+<!-- HERO -->
+<section class="gradient-bg pt-10 pb-10 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-orange-400 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- LEFT: Copy + Photo + Testimonial -->
+            <div class="text-left">
+                <!-- Photo + name callout -->
+                <div class="flex items-center gap-4 mb-5">
+                    <img src="/michael-flournoy.webp" onerror="this.onerror=null;this.src='/michael-flournoy.jpg'" width="88" height="88" alt="Michael Flournoy — Fractional VP of Sales" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover object-top border-4 border-yellow-300 flex-shrink-0 shadow-2xl" loading="eager" fetchpriority="high">
+                    <div>
+                        <p class="font-black text-white text-xl leading-tight">Michael Flournoy</p>
+                        <p class="text-blue-200 text-sm">Fractional VP of Sales</p>
+                        <p class="text-yellow-300 text-xs font-semibold mt-1">Whip Around ($100M) · Fleetmatics ($2.6B)</p>
+                    </div>
+                </div>
+
+                <div class="inline-flex items-center gap-2 trust-badge rounded-full px-4 py-2 mb-5">
+                    <i class="fas fa-shield-alt text-orange-300 text-sm"></i>
+                    <span class="text-white text-sm font-semibold">Free 30-Min Strategy Call — No Pitch, No Obligation</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
+                    Scale Your B2B Revenue<br>
+                    <span class="text-orange-400">10X Faster</span>
+                </h1>
+                <p class="text-lg text-blue-100 mb-5">
+                    A Fractional VP of Sales who has actually done it — from zero to a <strong class="text-white">$100M acquisition</strong>. Executive-level sales leadership without the $200K+ salary.
+                </p>
+                <div class="scarcity-badge inline-flex items-center gap-2 rounded-full px-4 py-2 mb-5">
+                    <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
+                    <span class="text-red-300 text-sm font-bold">Only 2 client spots open in <span data-gsd-month>this month</span></span>
+                </div>
+
+                <!-- Testimonial (real founder-style quote for credibility) -->
+                <div class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-5 mb-5">
+                    <div class="flex items-start gap-3">
+                        <div class="text-orange-400 text-3xl leading-none flex-shrink-0">“</div>
+                        <div>
+                            <p class="text-white text-sm leading-relaxed italic mb-3">Michael diagnosed our biggest pipeline leak in 20 minutes. We'd been trying to fix it for 6 months. Three months later we were tracking to add $1.2M in ARR from the change alone.</p>
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-bold">QM</div>
+                                <div>
+                                    <p class="text-white text-xs font-bold">Founder</p>
+                                    <p class="text-blue-200 text-xs">QuickManage TMS · B2B SaaS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-2 mb-5">
+                    <div class="flex items-center gap-2 text-blue-100 text-sm">
+                        <i class="fas fa-check-circle text-orange-400"></i>
+                        <span>Whip Around: 0 → $100M acquisition</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-blue-100 text-sm">
+                        <i class="fas fa-check-circle text-orange-400"></i>
+                        <span>Fleetmatics: scaled to $2.6B Verizon acquisition</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-blue-100 text-sm">
+                        <i class="fas fa-check-circle text-orange-400"></i>
+                        <span>Results in 30 days, not 6 months</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Booking Form -->
+            <div class="booking-card" id="booking-card">
+
+                <!-- Header -->
+                <div class="booking-header">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <div class="text-white font-bold text-lg">Book Your Free Strategy Call</div>
+                            <div class="text-blue-300 text-sm mt-0.5">Michael Flournoy · 30 Minutes · No pitch</div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-green-500 bg-opacity-20 border border-green-400 border-opacity-40 rounded-full px-3 py-1">
+                            <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                            <span class="text-green-300 text-xs font-bold">Available this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 1: Form (2-step to reduce friction) -->
+                <div id="form-step" style="padding: 24px;">
+                    <!-- Progress indicator -->
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:20px;">
+                        <div id="step-1-indicator" style="flex:1; height:4px; background:#16a34a; border-radius:2px;"></div>
+                        <div id="step-2-indicator" style="flex:1; height:4px; background:#e5e7eb; border-radius:2px;"></div>
+                        <span id="step-label" style="color:#6b7280; font-size:12px; font-weight:600; white-space:nowrap;">Step 1 of 2</span>
+                    </div>
+
+                    <form id="booking-form" novalidate>
+                        <!-- STEP 1 FIELDS: Just name/email/company (3 fields, low friction) -->
+                        <div id="form-step-1">
+                            <div style="margin-bottom:16px;">
+                                <label>Your Name <span>*</span></label>
+                                <input type="text" id="field-name" class="form-input" placeholder="Michael Smith" required>
+                            </div>
+                            <div style="margin-bottom:16px;">
+                                <label>Work Email <span>*</span></label>
+                                <input type="email" id="field-email" class="form-input" placeholder="you@company.com" required>
+                            </div>
+                            <div style="margin-bottom:20px;">
+                                <label>Company Name <span>*</span></label>
+                                <input type="text" id="field-company" class="form-input" placeholder="Acme Inc." required>
+                            </div>
+                            <div id="form-error-1" style="display:none; background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; padding:10px 14px; border-radius:8px; margin-bottom:16px; font-size:14px; font-weight:500;"></div>
+                            <button type="button" id="step-1-next" class="submit-btn">
+                                Continue →
+                            </button>
+                            <p style="text-align:center; color:#6b7280; font-size:12px; margin-top:12px;">Takes ~30 seconds · No spam, ever</p>
+                        </div>
+
+                        <!-- STEP 2 FIELDS: Role/ARR/Challenge (only shown after Step 1 is filled) -->
+                        <div id="form-step-2" style="display:none;">
+                            <div style="margin-bottom:16px;">
+                                <label>Your Role <span>*</span></label>
+                                <select id="field-role" class="form-input" required>
+                                    <option value="" disabled selected>Select one</option>
+                                    <option value="founder">Founder / CEO / Owner</option>
+                                    <option value="sales_leader">Head of Sales / VP / Sales Leader</option>
+                                    <option value="exec">Other C-Level / Executive</option>
+                                    <option value="sales_rep">Sales Rep / IC / Individual Contributor</option>
+                                    <option value="job_seeker">Looking for a Job / Career Advice</option>
+                                    <option value="student">Student / Researcher / Learning</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom:16px;">
+                                <label>Current ARR <span>*</span></label>
+                                <select id="field-arr" class="form-input" required>
+                                    <option value="" disabled selected>Select range</option>
+                                    <option value="pre_revenue">Pre-revenue / Just launched</option>
+                                    <option value="under_500k">Under $500K</option>
+                                    <option value="500k_1m">$500K – $1M</option>
+                                    <option value="1m_3m">$1M – $3M</option>
+                                    <option value="3m_5m">$3M – $5M</option>
+                                    <option value="5m_10m">$5M – $10M</option>
+                                    <option value="10m_plus">$10M+</option>
+                                </select>
+                            </div>
+                            <div style="margin-bottom:16px;">
+                                <label>Biggest sales challenge right now <span>*</span></label>
+                                <textarea id="field-challenge" class="form-input" rows="2" placeholder="e.g. Pipeline is inconsistent, close rate is low, no sales process..." required></textarea>
+                            </div>
+                            <div id="form-error" style="display:none; background:#fef2f2; border:1px solid #fecaca; color:#b91c1c; padding:10px 14px; border-radius:8px; margin-bottom:16px; font-size:14px; font-weight:500;"></div>
+                            <div style="display:flex; gap:8px;">
+                                <button type="button" id="step-2-back" style="padding:14px 18px; background:#f3f4f6; border:none; border-radius:10px; color:#374151; font-weight:600; cursor:pointer; font-size:14px;">← Back</button>
+                                <button type="submit" class="submit-btn" id="submit-btn" style="flex:1;">
+                                    Reserve My Call →
+                                </button>
+                            </div>
+                            <div class="trust-row" style="margin-top:14px;">
+                                <div class="trust-item"><i class="fas fa-lock"></i> Private & secure</div>
+                                <div class="trust-item"><i class="fas fa-calendar-check"></i> Pick your time next</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- STEP 2: Loading -->
+                <div id="loading-step">
+                    <div class="spinner"></div>
+                    <div style="font-weight:700; color:#1e3a8a; font-size:18px; margin-bottom:8px;">Saving your details...</div>
+                    <div style="color:#6b7280; font-size:14px;">Redirecting you to pick your time in just a second.</div>
+                </div>
+
+                <!-- STEP 3: Success (fallback if redirect fails) -->
+                <div id="success-step">
+                    <div class="checkmark">🎉</div>
+                    <div style="font-weight:800; color:#1e3a8a; font-size:22px; margin-bottom:8px;">You're on your way!</div>
+                    <div style="color:#6b7280; font-size:15px; margin-bottom:24px;">If you weren't redirected automatically, click below to pick your time.</div>
+                    <a id="calendly-fallback-link" href="https://calendly.com/gsdassociatesllc/30min" target="_blank"
+                        style="display:inline-block; background:linear-gradient(135deg,#16a34a,#15803d); color:white; font-weight:800; padding:14px 32px; border-radius:12px; text-decoration:none; font-size:16px;">
+                        Pick Your Time →
+                    </a>
+                </div>
+
+                <!-- STEP 4: NOT A FIT (unqualified roles — no Calendly, no conversion pixels) -->
+                <div id="not-a-fit-step" style="display:none; text-align:center; padding:8px 0;">
+                    <div style="font-size:48px; margin-bottom:8px;">🙏</div>
+                    <div style="font-weight:800; color:#1e3a8a; font-size:22px; margin-bottom:12px;">Thanks, <span id="nf-name">friend</span> — but not the right fit.</div>
+                    <div id="nf-message" style="color:#4b5563; font-size:15px; line-height:1.6; margin-bottom:24px; text-align:left;">GSD Associates works with founders and sales leaders — not the fit you're looking for. But we'd love to still help.</div>
+
+                    <div style="background:#f9fafb; border-radius:12px; padding:20px; text-align:left; margin-bottom:20px;">
+                        <div style="font-weight:700; color:#1e3a8a; font-size:16px; margin-bottom:14px;">Free resources that will help you more than a call would:</div>
+                        <div style="display:flex; flex-direction:column; gap:10px;">
+                            <a href="/playbook/" style="display:flex; align-items:center; gap:12px; padding:12px; background:white; border-radius:8px; text-decoration:none; color:#111827; border:1px solid #e5e7eb;">
+                                <span style="font-size:24px;">📘</span>
+                                <div>
+                                    <div style="font-weight:700;">The 0-to-$100M Sales Playbook</div>
+                                    <div style="color:#6b7280; font-size:13px;">10 systems from Whip Around → $100M acquisition. Free PDF.</div>
+                                </div>
+                            </a>
+                            <a href="/blog/" style="display:flex; align-items:center; gap:12px; padding:12px; background:white; border-radius:8px; text-decoration:none; color:#111827; border:1px solid #e5e7eb;">
+                                <span style="font-size:24px;">✍️</span>
+                                <div>
+                                    <div style="font-weight:700;">The Blog</div>
+                                    <div style="color:#6b7280; font-size:13px;">Sales leadership, hiring, pipeline building — everything Michael wishes he knew earlier.</div>
+                                </div>
+                            </a>
+                            <a href="/resources/" style="display:flex; align-items:center; gap:12px; padding:12px; background:white; border-radius:8px; text-decoration:none; color:#111827; border:1px solid #e5e7eb;">
+                                <span style="font-size:24px;">🛠️</span>
+                                <div>
+                                    <div style="font-weight:700;">Free Templates & Frameworks</div>
+                                    <div style="color:#6b7280; font-size:13px;">Pipeline audit, discovery checklist, sales process templates — the same ones we use.</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="color:#9ca3af; font-size:13px; font-style:italic;">If your situation changes and you'd fit our ICP (B2B SaaS founder or sales leader at $500K+ ARR), we'd love to talk then.</div>
+                </div>
+
+                <!-- STEP 5: LOW ARR (qualified role but pre-rev/under $500K) — soft dismissal, product upsell -->
+                <div id="low-arr-step" style="display:none; text-align:center; padding:8px 0;">
+                    <div style="font-size:48px; margin-bottom:8px;">🌱</div>
+                    <div style="font-weight:800; color:#1e3a8a; font-size:22px; margin-bottom:12px;">Hey <span id="la-name">friend</span> — love that you're building.</div>
+                    <div style="color:#4b5563; font-size:15px; line-height:1.6; margin-bottom:20px; text-align:left;">
+                        Honest answer: a fractional VP of sales isn't the right investment yet. At your stage, you need to sell it yourself — that's how you learn what your customers actually want.
+                        <br><br>
+                        <strong>But when you're ready, we've got two things that WILL help:</strong>
+                    </div>
+
+                    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
+                        <a href="/products/sales-os/" style="display:flex; align-items:center; gap:14px; padding:16px; background:linear-gradient(135deg,#1e3a8a,#2563eb); border-radius:12px; text-decoration:none; color:white; text-align:left;">
+                            <span style="font-size:32px;">🚀</span>
+                            <div style="flex:1;">
+                                <div style="font-weight:800; font-size:16px;">Sales OS — $47/mo</div>
+                                <div style="color:#dbeafe; font-size:13px; margin-top:2px;">Templates, frameworks, and community for founder-led sales. Cancel anytime.</div>
+                            </div>
+                            <span style="font-size:20px;">→</span>
+                        </a>
+                        <a href="/products/sales-audit/" style="display:flex; align-items:center; gap:14px; padding:16px; background:white; border-radius:12px; text-decoration:none; color:#111827; border:2px solid #f97316; text-align:left;">
+                            <span style="font-size:32px;">🔍</span>
+                            <div style="flex:1;">
+                                <div style="font-weight:800; font-size:16px; color:#111827;">Sales Process Audit — $497</div>
+                                <div style="color:#6b7280; font-size:13px; margin-top:2px;">Custom 10-page report identifying exactly where deals are dying.</div>
+                            </div>
+                            <span style="font-size:20px; color:#f97316;">→</span>
+                        </a>
+                    </div>
+
+                    <div style="background:#fef3c7; border-radius:12px; padding:14px; text-align:left;">
+                        <div style="font-weight:700; color:#92400e; font-size:14px; margin-bottom:4px;">💡 Or start free:</div>
+                        <div style="color:#78350f; font-size:14px;">Grab <a href="/playbook/" style="color:#1e3a8a; font-weight:600;">The 0-to-$100M Sales Playbook</a> — free PDF with 10 systems that scaled Whip Around from 4 people to a $100M acquisition.</div>
+                    </div>
+
+                    <div style="color:#9ca3af; font-size:13px; font-style:italic; margin-top:20px;">When you hit $500K+ ARR, come back — we'll be here.</div>
+                </div>
+
+            </div><!-- /booking-card -->
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<section class="bg-white py-8 px-4 border-b border-gray-100">
+    <div class="max-w-5xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="stat-card rounded-2xl p-5">
+                <div class="text-3xl font-black text-blue-900 mb-1">$100M</div>
+                <div class="text-gray-500 text-sm">Whip Around Exit</div>
+            </div>
+            <div class="stat-card rounded-2xl p-5">
+                <div class="text-3xl font-black text-blue-900 mb-1">$2.6B</div>
+                <div class="text-gray-500 text-sm">Fleetmatics → Verizon</div>
+            </div>
+            <div class="stat-card rounded-2xl p-5">
+                <div class="text-3xl font-black text-blue-900 mb-1">3-5x</div>
+                <div class="text-gray-500 text-sm">Pipeline Growth in 90 Days</div>
+            </div>
+            <div class="stat-card rounded-2xl p-5">
+                <div class="text-3xl font-black text-blue-900 mb-1">30 Days</div>
+                <div class="text-gray-500 text-sm">To First Results</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STORY + TESTIMONIALS -->
+<section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <div class="text-sm text-orange-600 font-bold mb-3 uppercase tracking-wide">The Story Behind GSD</div>
+                <h2 class="text-3xl font-black text-gray-900 mb-4">From 4-Person Startup to $100M Exit</h2>
+                <p class="text-gray-600 text-lg mb-4">
+                    Michael Flournoy was one of four people who opened the US office of <strong class="text-blue-900">Whip Around</strong>, a fleet management SaaS company. He built the sales team from scratch — no playbook, no pipeline, no CRM — and helped scale it to over 150,000 users and a <strong class="text-blue-900">$100M acquisition</strong>.
+                </p>
+                <p class="text-gray-600 text-lg mb-6">
+                    Now he brings that same playbook to B2B companies stuck between $1M–$10M ARR — as your Fractional VP of Sales. Same caliber of sales leadership, fraction of the cost.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <strong class="text-gray-900">Build pipeline that actually converts</strong>
+                            <p class="text-gray-500 text-sm mt-1">Stage definitions, qualification criteria, and a repeatable process — not just "more activity."</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <strong class="text-gray-900">Hire, coach & manage your sales team</strong>
+                            <p class="text-gray-500 text-sm mt-1">Comp plans, onboarding, weekly reviews, KPIs — everything a full-time VP does.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <i class="fas fa-check text-green-600 text-sm"></i>
+                        </div>
+                        <div>
+                            <strong class="text-gray-900">Results in 30 days — not 6 months</strong>
+                            <p class="text-gray-500 text-sm mt-1">Quick-start audit, 90-day roadmap, and execution from week one.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                    <h3 class="font-bold text-blue-900 mb-3"><i class="fas fa-bullseye mr-2 text-orange-500"></i>Who This Is For</h3>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> B2B/SaaS companies at $1M–$10M ARR</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> No dedicated sales leadership in place</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Can't afford a full-time VP ($200K+ total comp)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-blue-600"></i> Need someone who's actually done it before</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white rounded-2xl p-7 shadow-lg border-l-4 border-orange-500">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i>
+                    </div>
+                    <blockquote class="text-gray-700 text-lg italic leading-relaxed mb-5">
+                        "Michael came in Month 1 and immediately restructured how we approach demos and discovery. The clarity he brought to our sales process was something we'd been missing for years."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-900 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">QM</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">QuickManage</div>
+                            <div class="text-gray-500 text-sm">Fleet & Transportation TMS · Current Client</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-7 shadow-lg border-l-4 border-blue-600">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i><i class="fas fa-star text-orange-400"></i>
+                    </div>
+                    <blockquote class="text-gray-700 text-lg italic leading-relaxed mb-5">
+                        "Within 60 days our pipeline was 3x larger and our close rate improved from 12% to 28%. He doesn't just advise — he rolls up his sleeves."
+                    </blockquote>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">SF</span>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">B2B SaaS Founder</div>
+                            <div class="text-gray-500 text-sm">Software Company · $2M ARR</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white rounded-xl p-4 text-center shadow border border-gray-100">
+                        <div class="text-2xl">🏆</div>
+                        <div class="text-sm font-bold text-gray-900 mt-1">Whip Around</div>
+                        <div class="text-xs text-gray-500">$100M Acquisition</div>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center shadow border border-gray-100">
+                        <div class="text-2xl">🏆</div>
+                        <div class="text-sm font-bold text-gray-900 mt-1">Fleetmatics</div>
+                        <div class="text-xs text-gray-500">$2.6B → Verizon</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="gradient-bg py-12 px-4">
+    <div class="max-w-3xl mx-auto text-center text-white">
+        <h2 class="text-2xl font-bold mb-3">Still on the fence?</h2>
+        <p class="text-blue-100 text-lg mb-6">Download our free Pipeline Audit Template and see exactly where your sales process is leaking revenue.</p>
+        <a href="/resources/" class="bg-white text-blue-900 px-8 py-3 rounded-full font-bold text-lg inline-block hover:bg-gray-100 transition">
+            Get Free Templates <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-400 py-8 px-4 text-center">
+    <p class="text-sm mb-2">&copy; 2026 GSD Associates. All rights reserved.</p>
+    <p class="text-sm">
+        <a href="/privacy/" class="hover:text-white transition">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="mailto:gsdassociatesllc@gmail.com" class="text-orange-400 hover:text-orange-300 font-semibold">gsdassociatesllc@gmail.com</a>
+    </p>
+</footer>
+
+<script>
+const WEBHOOK = 'https://script.google.com/macros/s/AKfycbzVNSA9bdc2KiUjG6xwG-XqJFPJNM3dIuY_e4_5TONkv_fqq3s6JEPrgU-PkJlEeRQ/exec';
+
+// ============================================================
+// LEAD QUALIFICATION LOGIC
+// ============================================================
+// Only these roles get routed to Calendly booking:
+const QUALIFIED_ROLES = ['founder', 'sales_leader', 'exec'];
+// Below this ARR threshold, prospects are routed to nurture (not Calendly):
+const LOW_ARR_TIERS = ['pre_revenue', 'under_500k'];
+
+// Simple email/garbage validation (matches homepage patterns)
+function isValidEmailFmt(email){
+    return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
+}
+function looksLikeGarbageStr(s){
+    if(!s) return true;
+    const t = s.toLowerCase().trim();
+    if(t.length < 2) return true;
+    // Common garbage patterns
+    if(/^(test|asdf|qwer|1234|xxxx|aaaa|bbbb|abcd|zzz+|blah|foo|bar)$/i.test(t)) return true;
+    // Same char repeated 4+ times (aaaa, 1111)
+    if(/(.)\1{3,}/.test(t)) return true;
+    // No vowels or numbers only (usually keyboard mashing on short strings)
+    if(t.length < 6 && /^[bcdfghjklmnpqrstvwxyz]+$/i.test(t)) return true;
+    return false;
+}
+
+// ==================================================
+// 2-STEP FORM NAVIGATION (Step 1: Name/Email/Company → Step 2: Role/ARR/Challenge)
+// ==================================================
+function showError1(msg){
+    const err = document.getElementById('form-error-1');
+    err.textContent = msg;
+    err.style.display = 'block';
+    setTimeout(function(){ err.style.display = 'none'; }, 5000);
+}
+document.getElementById('step-1-next').addEventListener('click', function(){
+    const name = document.getElementById('field-name').value.trim();
+    const email = document.getElementById('field-email').value.trim();
+    const company = document.getElementById('field-company').value.trim();
+
+    // Reset borders
+    ['field-name','field-email','field-company'].forEach(function(id){
+        document.getElementById(id).style.borderColor = '';
+    });
+
+    if (!name || !email || !company) {
+        if (!name) document.getElementById('field-name').style.borderColor = '#ef4444';
+        if (!email) document.getElementById('field-email').style.borderColor = '#ef4444';
+        if (!company) document.getElementById('field-company').style.borderColor = '#ef4444';
+        showError1('Please fill out all fields.');
+        return;
+    }
+    if (name.length < 2) { document.getElementById('field-name').style.borderColor='#ef4444'; showError1('Please enter your full name.'); return; }
+    if (company.length < 2) { document.getElementById('field-company').style.borderColor='#ef4444'; showError1('Please enter your company name.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { document.getElementById('field-email').style.borderColor='#ef4444'; showError1('Please enter a valid email address.'); return; }
+    if (looksLikeGarbage(name) || looksLikeGarbage(company)) {
+        if (looksLikeGarbage(name)) document.getElementById('field-name').style.borderColor='#ef4444';
+        if (looksLikeGarbage(company)) document.getElementById('field-company').style.borderColor='#ef4444';
+        showError1('Please enter real information so we can help you.');
+        return;
+    }
+
+    // Step 1 valid — advance to Step 2
+    document.getElementById('form-step-1').style.display = 'none';
+    document.getElementById('form-step-2').style.display = 'block';
+    document.getElementById('step-2-indicator').style.background = '#16a34a';
+    document.getElementById('step-label').textContent = 'Step 2 of 2';
+
+    // Track advance in GA4
+    try { if (window.gtag) gtag('event','form_step_advance',{event_category:'engagement',event_label:'step_1_to_2',value:1}); } catch(err){}
+});
+document.getElementById('step-2-back').addEventListener('click', function(){
+    document.getElementById('form-step-2').style.display = 'none';
+    document.getElementById('form-step-1').style.display = 'block';
+    document.getElementById('step-2-indicator').style.background = '#e5e7eb';
+    document.getElementById('step-label').textContent = 'Step 1 of 2';
+});
+
+document.getElementById('booking-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name     = document.getElementById('field-name').value.trim();
+    const email    = document.getElementById('field-email').value.trim();
+    const company  = document.getElementById('field-company').value.trim();
+    const role     = document.getElementById('field-role').value;
+    const arr      = document.getElementById('field-arr').value;
+    const challenge = document.getElementById('field-challenge').value.trim();
+
+    // Clear previous errors
+    const errEl = document.getElementById('form-error');
+    if(errEl){ errEl.style.display = 'none'; errEl.textContent = ''; }
+    ['field-name','field-email','field-company','field-role','field-arr','field-challenge'].forEach(id => {
+        const el = document.getElementById(id);
+        if(el){ el.style.borderColor = ''; el.style.boxShadow = ''; }
+    });
+
+    // Required field validation
+    if (!name || !email || !company || !role || !arr || !challenge) {
+        ['field-name','field-email','field-company','field-role','field-arr','field-challenge'].forEach(id => {
+            const el = document.getElementById(id);
+            const val = el.tagName === 'SELECT' ? el.value : el.value.trim();
+            if (!val) {
+                el.style.borderColor = '#ef4444';
+                el.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.15)';
+            }
+        });
+        if(errEl){ errEl.textContent = 'Please fill out all required fields.'; errEl.style.display = 'block'; }
+        return;
+    }
+
+    // Email format validation
+    if(!isValidEmailFmt(email)){
+        document.getElementById('field-email').style.borderColor = '#ef4444';
+        document.getElementById('field-email').style.boxShadow = '0 0 0 3px rgba(239,68,68,0.15)';
+        if(errEl){ errEl.textContent = 'Please enter a valid email address.'; errEl.style.display = 'block'; }
+        return;
+    }
+
+    // Garbage input detection
+    if(looksLikeGarbageStr(name) || looksLikeGarbageStr(company) || challenge.length < 10){
+        if(challenge.length < 10){
+            document.getElementById('field-challenge').style.borderColor = '#ef4444';
+            document.getElementById('field-challenge').style.boxShadow = '0 0 0 3px rgba(239,68,68,0.15)';
+            if(errEl){ errEl.textContent = 'Tell us a bit more about your sales challenge (at least 10 characters).'; errEl.style.display = 'block'; }
+        } else {
+            if(errEl){ errEl.textContent = 'Please enter real information so we can help you.'; errEl.style.display = 'block'; }
+        }
+        return;
+    }
+
+    // Disable button, show loading
+    document.getElementById('submit-btn').disabled = true;
+    document.getElementById('form-step').style.display = 'none';
+    document.getElementById('loading-step').style.display = 'block';
+
+    // ============================================================
+    // ROUTING DECISION
+    // ============================================================
+    const isQualifiedRole = QUALIFIED_ROLES.indexOf(role) !== -1;
+    const isLowArr = LOW_ARR_TIERS.indexOf(arr) !== -1;
+
+    // Log to Google Sheet with routing decision
+    let routingDecision = 'qualified_call';
+    if(!isQualifiedRole) routingDecision = 'unqualified_role_' + role;
+    else if(isLowArr) routingDecision = 'low_arr_nurture';
+
+    // Fire webhook to capture ALL leads (with routing decision)
+    try {
+        fetch(WEBHOOK, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name, email, company, role, arr, challenge,
+                routing: routingDecision,
+                source: 'Start Page — Booking Form',
+                timestamp: new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
+            })
+        });
+    } catch(err) { /* silent fail */ }
+
+    // ============================================================
+    // ROUTE 1: Unqualified role (job seekers, students, sales reps, other)
+    // — NO conversion pixels fire, NO Calendly redirect, polite dismissal
+    // ============================================================
+    if(!isQualifiedRole){
+        setTimeout(() => {
+            document.getElementById('loading-step').style.display = 'none';
+            document.getElementById('not-a-fit-step').style.display = 'block';
+            document.getElementById('nf-name').textContent = name.split(' ')[0] || name;
+            // Customize message by role
+            let subMsg = "GSD Associates works with founders and sales leaders — not the fit you're looking for. But we'd love to still help.";
+            if(role === 'sales_rep'){
+                subMsg = "GSD Associates works directly with founders and sales leaders to build sales teams. If you're an individual contributor looking to level up, our free resources below will help more than a call would.";
+            } else if(role === 'job_seeker'){
+                subMsg = "GSD Associates isn't a recruiting firm — we work with companies as a fractional sales leader. But we've written extensively about breaking into sales leadership. The links below will be more valuable than a call.";
+            } else if(role === 'student'){
+                subMsg = "Awesome that you're learning about sales leadership. We can't do research calls — but Michael has written the equivalent of a small book on the topic. Everything is free below.";
+            }
+            document.getElementById('nf-message').textContent = subMsg;
+        }, 800);
+        return;
+    }
+
+    // ============================================================
+    // ROUTE 2: Qualified role BUT low ARR (pre-revenue or under $500K)
+    // — Route to Sales OS/Products page instead of Calendly, softer conversion signal
+    // ============================================================
+    if(isLowArr){
+        setTimeout(() => {
+            document.getElementById('loading-step').style.display = 'none';
+            document.getElementById('low-arr-step').style.display = 'block';
+            document.getElementById('la-name').textContent = name.split(' ')[0] || name;
+        }, 800);
+
+        // Fire GA4 event but NOT the Google Ads $500 conversion (this is a nurture lead, not a booked call)
+        try {
+            if(window.gtag){
+                gtag('event', 'generate_lead', {
+                    event_category: 'lead_capture',
+                    event_label: 'low_arr_nurture',
+                    value: 50,
+                    currency: 'USD'
+                });
+            }
+        } catch(err) { /* silent */ }
+        return;
+    }
+
+    // ============================================================
+    // ROUTE 3: QUALIFIED LEAD — book the call
+    // ============================================================
+    const calendlyUrl = `https://calendly.com/gsdassociatesllc/30min?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(company)}&a2=${encodeURIComponent(arr)}&a3=${encodeURIComponent(challenge)}`;
+    document.getElementById('calendly-fallback-link').href = calendlyUrl;
+
+    // Fire Google Ads conversion (Book Appointment intent) — ONLY for qualified leads
+    try {
+        if(window.gtag){
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17945394532/60bMCLKG75ccEOT6g-1C',
+                'value': 500.0,
+                'currency': 'USD',
+                'transaction_id': email + '-' + Date.now()
+            });
+            gtag('event', 'book_appointment', {
+                event_category: 'conversion',
+                event_label: 'start_page_form',
+                value: 500
+            });
+            gtag('event', 'generate_lead', {
+                event_category: 'conversion',
+                event_label: 'start_page_form',
+                value: 500,
+                currency: 'USD'
+            });
+        }
+    } catch(err) { /* silent */ }
+
+    // Fire Meta Pixel Lead event too
+    try { if(window.fbq){ fbq('track', 'Lead', {content_name: 'Strategy Call Booking', value: 500, currency: 'USD'}); } } catch(err) {}
+
+    // Redirect to Calendly after short delay
+    setTimeout(() => {
+        window.location.href = calendlyUrl;
+    }, 1200);
+
+    // Fallback: if redirect doesn't fire in 3s, show success step
+    setTimeout(() => {
+        document.getElementById('loading-step').style.display = 'none';
+        document.getElementById('success-step').style.display = 'block';
+    }, 3000);
+});
+
+// Clear error states on input/change
+document.querySelectorAll('.form-input').forEach(el => {
+    const clear = () => {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+        const err = document.getElementById('form-error');
+        if(err){ err.style.display = 'none'; err.textContent = ''; }
+    };
+    el.addEventListener('input', clear);
+    el.addEventListener('change', clear);
+});
+</script>
+
+  <script src="/gsd-book-modal.js" defer></script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body>
+</html>

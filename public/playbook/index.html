@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 0-to-$100M Sales Playbook | Free Download by Michael Flournoy</title>
+<meta name="description" content="10 systems Michael Flournoy used to help scale Whip Around from 4 people in a WeWork to a $100M acquisition — now available as a free playbook for B2B SaaS founders.">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','947084454377360');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=947084454377360&ev=PageView&noscript=1"/></noscript>
+
+<!-- RB2B Visitor Identification -->
+<script>!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("GNLKQHPL136Q");</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #F9FAFB; color: #1F2937; line-height: 1.6;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    background: linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 50%, #1E40AF 100%);
+    padding: 64px 24px 52px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(234,88,12,0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero .kicker {
+    display: inline-block;
+    background: rgba(234,88,12,0.18);
+    color: #FED7AA;
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 50px;
+    border: 1px solid rgba(234,88,12,0.3);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900; line-height: 1.15; margin-bottom: 14px;
+  }
+  .hero h1 span { color: #FB923C; }
+  .hero .sub {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: rgba(255,255,255,0.8); max-width: 580px;
+    margin: 0 auto 28px;
+  }
+  .hero .author-bar {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 10px 20px; border-radius: 50px;
+    font-size: 0.9rem;
+  }
+  .hero .author-bar .dot {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: linear-gradient(135deg, #EA580C, #C2410C);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1rem; color: #fff; flex-shrink: 0;
+  }
+  .hero .author-bar .info { text-align: left; }
+  .hero .author-bar .name { font-weight: 700; font-size: 0.92rem; }
+  .hero .author-bar .role { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
+
+  /* ---- PROOF BAR ---- */
+  .proof-bar {
+    background: #fff; border-bottom: 1px solid #E5E7EB;
+    padding: 18px 24px;
+  }
+  .proof-bar .inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; justify-content: center;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .proof-bar .stat .num {
+    font-size: 1.4rem; font-weight: 900; color: #EA580C;
+    display: block; line-height: 1.2;
+  }
+  .proof-bar .stat .label {
+    font-size: 0.72rem; color: #9CA3AF; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ---- MAIN GRID ---- */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 52px;
+    padding: 56px 24px;
+    max-width: 1020px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  /* ---- LEFT: What's Inside ---- */
+  .left h2 {
+    font-size: 1.5rem; font-weight: 800; color: #111827;
+    margin-bottom: 6px;
+  }
+  .left .section-intro {
+    font-size: 1rem; color: #6B7280; margin-bottom: 28px; line-height: 1.7;
+  }
+
+  .system-list { display: flex; flex-direction: column; gap: 14px; }
+  .system-item {
+    display: flex; gap: 14px; align-items: flex-start;
+    padding: 14px 16px;
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .system-item:hover { border-color: #93C5FD; box-shadow: 0 2px 12px rgba(37,99,235,0.07); }
+  .system-num {
+    font-size: 0.72rem; font-weight: 800; color: #EA580C;
+    letter-spacing: 1px; text-transform: uppercase;
+    min-width: 28px; padding-top: 2px;
+  }
+  .system-text h3 { font-size: 0.95rem; font-weight: 700; color: #111827; margin-bottom: 2px; }
+  .system-text p { font-size: 0.85rem; color: #6B7280; line-height: 1.55; }
+
+  .story-block {
+    margin-top: 32px; padding: 20px 22px;
+    background: linear-gradient(135deg, #EFF6FF, #F0F9FF);
+    border-left: 4px solid #1E3A8A; border-radius: 0 10px 10px 0;
+  }
+  .story-block blockquote {
+    font-size: 1.05rem; font-style: italic;
+    color: #1E3A8A; line-height: 1.7; margin-bottom: 8px;
+  }
+  .story-block cite { font-size: 0.82rem; color: #6B7280; font-style: normal; }
+
+  /* ---- RIGHT: Form Card ---- */
+  .form-card {
+    background: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 30px 26px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    position: sticky; top: 24px;
+  }
+  .form-card .card-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #EA580C, #C2410C);
+    color: #fff; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 50px; margin-bottom: 14px;
+  }
+  .form-card h3 {
+    font-size: 1.3rem; font-weight: 800; color: #111827; margin-bottom: 4px;
+  }
+  .form-card .card-sub {
+    font-size: 0.88rem; color: #6B7280; margin-bottom: 22px; line-height: 1.55;
+  }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block; font-size: 0.82rem; font-weight: 600;
+    color: #374151; margin-bottom: 5px;
+  }
+  .form-group input {
+    width: 100%; padding: 11px 14px;
+    border: 1.5px solid #D1D5DB; border-radius: 8px;
+    font-size: 0.95rem; color: #111827;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-group input:focus {
+    border-color: #1D4ED8;
+    box-shadow: 0 0 0 3px rgba(29,78,216,0.12);
+  }
+  .form-group input::placeholder { color: #9CA3AF; }
+
+  .phone-note {
+    font-size: 0.78rem; color: #9CA3AF; margin-top: 4px; line-height: 1.4;
+  }
+
+  .submit-btn {
+    width: 100%; padding: 14px;
+    background: linear-gradient(135deg, #EA580C, #C2410C);
+    color: #fff; border: none; border-radius: 10px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; margin-top: 6px;
+  }
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(234,88,12,0.35);
+  }
+  .submit-btn:active { transform: translateY(0); }
+
+  .form-note {
+    font-size: 0.76rem; color: #9CA3AF;
+    text-align: center; margin-top: 10px; line-height: 1.5;
+  }
+  .trust-row {
+    display: flex; justify-content: center; gap: 16px;
+    margin-top: 16px; flex-wrap: wrap;
+  }
+  .trust-row span {
+    font-size: 0.76rem; color: #6B7280;
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  /* Form social proof mini */
+  .form-proof {
+    background: #F9FAFB; border-radius: 8px; padding: 12px 14px;
+    margin-bottom: 18px; border: 1px solid #E5E7EB;
+  }
+  .form-proof p {
+    font-size: 0.82rem; color: #374151; line-height: 1.5;
+    font-style: italic;
+  }
+  .form-proof .fp-cite {
+    font-size: 0.76rem; color: #9CA3AF; font-style: normal;
+    margin-top: 4px; display: block;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: #1E3A8A; color: rgba(255,255,255,0.6);
+    text-align: center; padding: 28px;
+    font-size: 0.84rem;
+  }
+  footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 780px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+      padding: 36px 20px; gap: 28px;
+    }
+    .form-card { position: static; }
+    .hero { padding: 48px 20px 36px; }
+    .proof-bar .inner { gap: 20px; }
+  }
+</style>
+  <script src="/tracking.js"></script>
+<!-- HubSpot Tracking -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22350871.js"></script>
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.gsdassociates.net/playbook/">
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gsdassociates.net/playbook/">
+    <meta property="og:title" content="The 0-to-$100M Sales Playbook | Free Download by Michael Flournoy">
+    <meta property="og:description" content="10 systems Michael Flournoy used to help scale Whip Around from 4 people in a WeWork to a $100M acquisition — now available as a free playbook for B2B SaaS founders.">
+    <meta property="og:image" content="https://www.gsdassociates.net/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="GSD Associates">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The 0-to-$100M Sales Playbook | Free Download by Michael Flournoy">
+    <meta name="twitter:description" content="10 systems Michael Flournoy used to help scale Whip Around from 4 people in a WeWork to a $100M acquisition — now available as a free playbook for B2B SaaS founders.">
+    <meta name="twitter:image" content="https://www.gsdassociates.net/og-image.jpg">
+
+    <!-- Calendly Conversion Tracking -->
+    <script src="/calendly-conversion.js" defer></script>
+
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="kicker">Free Download · Instant Access</div>
+  <h1>The <span>VP of Sales</span><br>Playbook</h1>
+  <p class="sub">
+    10 systems from the founding sales team that built Whip Around
+    from 4 people in a WeWork to a <strong>$100M acquisition.</strong>
+    The exact playbook. No fluff.
+  </p>
+  <div class="author-bar">
+    <div class="dot">M</div>
+    <div class="info">
+      <div class="name">Michael Flournoy</div>
+      <div class="role">Founder &amp; Fractional VP of Sales · GSD Associates</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="inner">
+    <div class="stat">
+      <span class="num">$0 → $100M</span>
+      <span class="label">Acquisition Journey</span>
+    </div>
+    <div class="stat">
+      <span class="num">10</span>
+      <span class="label">Battle-Tested Systems</span>
+    </div>
+    <div class="stat">
+      <span class="num">4</span>
+      <span class="label">People Who Built It</span>
+    </div>
+    <div class="stat">
+      <span class="num">Free</span>
+      <span class="label">Instant PDF Download</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-grid">
+
+  <!-- LEFT -->
+  <div class="left">
+    <h2>What's Inside the Playbook</h2>
+    <p class="section-intro">
+      Not theory. Not a framework from a conference stage. These are the exact
+      10 systems I built and used at Whip Around — from first hire to $100M exit.
+      I now install this same playbook for B2B SaaS companies stuck between
+      $1M and $10M ARR.
+    </p>
+
+    <div class="system-list">
+      <div class="system-item">
+        <div class="system-num">01</div>
+        <div class="system-text">
+          <h3>Build the System Before You Scale the Team</h3>
+          <p>Why process beats talent — and what to document before your first sales hire.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">02</div>
+        <div class="system-text">
+          <h3>Discovery Is the Whole Game</h3>
+          <p>The 5 diagnostic questions that transformed our win rate in one quarter.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">03</div>
+        <div class="system-text">
+          <h3>Clean Your Pipeline or It Will Kill You</h3>
+          <p>How to separate real opportunities from wishful thinking. The Monday audit.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">04</div>
+        <div class="system-text">
+          <h3>Coach Weekly or Don't Bother</h3>
+          <p>The 80-minute weekly cadence that drove 2.3x quota attainment in coached reps.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">05</div>
+        <div class="system-text">
+          <h3>Founder-Led Sales First — Always</h3>
+          <p>Why you must close 50 deals yourself before you hire anyone. No exceptions.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">06</div>
+        <div class="system-text">
+          <h3>The Hiring Framework That Actually Works</h3>
+          <p>The $200K VP of Sales is the most expensive mistake at $1–3M ARR. Here's what to do instead.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">07</div>
+        <div class="system-text">
+          <h3>Outbound Wins</h3>
+          <p>Why waiting for inbound is a losing strategy. The 3-touch sequence that drove 40% of new business.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">08</div>
+        <div class="system-text">
+          <h3>The Metrics That Matter (And the Ones That Lie)</h3>
+          <p>Pipeline coverage ratio, stage conversion, win rate by source. What to actually track.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">09</div>
+        <div class="system-text">
+          <h3>Compensation: How to Structure It So Reps Stay and Win</h3>
+          <p>Make it easy to earn, hard to coast. The comp structure we used at Whip Around.</p>
+        </div>
+      </div>
+      <div class="system-item">
+        <div class="system-num">10</div>
+        <div class="system-text">
+          <h3>How to Know When You're Ready for a Full-Time VP</h3>
+          <p>The 4-criteria test. Most founders hire too early — and pay for it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-block">
+      <blockquote>
+        "We were 4 people in a WeWork with zero revenue, zero brand, and zero clients.
+        Everything in this playbook was built in the trenches — not in a strategy session.
+        These are the systems that made the $100M exit possible."
+      </blockquote>
+      <cite>— Michael Flournoy, Founder of GSD Associates</cite>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="form-card">
+    <div class="card-badge">Free PDF Download</div>
+    <h3>Get the Playbook Now</h3>
+    <p class="card-sub">
+      Fill in your details and the PDF downloads instantly.
+      I may follow up — one time, no pitch, just a real conversation.
+    </p>
+
+    <div class="form-proof">
+      <p>"This is the clearest breakdown of early-stage sales systems I've seen. Practical, specific, no BS."</p>
+      <span class="fp-cite">— SaaS founder, Series A</span>
+    </div>
+
+    <form id="playbook-form" action="/api/download" method="POST">
+      <div class="form-group">
+        <label for="name">First Name *</label>
+        <input type="text" id="name" name="name" placeholder="Michael" required autocomplete="given-name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Work Email *</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required autocomplete="tel">
+        <p class="phone-note">Used for a one-time follow-up only. No spam, no lists.</p>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company <span style="color:#9CA3AF;font-weight:400;">(optional)</span></label>
+        <input type="text" id="company" name="company" placeholder="Acme Inc" autocomplete="organization">
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">
+        Download the Playbook →
+      </button>
+
+      <p class="form-note">
+        Your info is private. We don't sell data or add you to email lists.
+      </p>
+    </form>
+
+    <div class="trust-row">
+      <span>📄 PDF Format</span>
+      <span>⚡ Instant Download</span>
+      <span>🔒 No Spam</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>GSD Associates &nbsp;|&nbsp; <a href="https://www.gsdassociates.net">gsdassociates.net</a></p>
+  <p style="margin-top:6px;">&copy; 2026 GSD Associates. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById('playbook-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('submit-btn');
+  btn.textContent = 'Getting your playbook...';
+  btn.disabled = true;
+
+  var name    = document.getElementById('name').value;
+  var email   = document.getElementById('email').value;
+  var phone   = document.getElementById('phone').value;
+  var company = (document.getElementById('company').value || 'Not provided');
+  var ts      = new Date().toLocaleString('en-US', {timeZone:'America/New_York'});
+
+  // Fire tracking pixels
+  if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'VP of Sales Playbook', content_category: 'Lead Magnet' });
+  if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { event_category: 'lead_magnet', event_label: 'vp_sales_playbook' });
+
+  // Send lead to Google Apps Script webhook (emails Michael)
+  var payload = JSON.stringify({ name: name, email: email, phone: phone, company: company, timestamp: ts, source: 'Playbook Download' });
+  fetch('https://script.google.com/macros/s/AKfycbxg1xdEV01Gsc_h9_5sYZhBKk-D57cKXKuRPC7u0KIN8vi4W6UDFjYP69U9olwUnfuWFQ/exec', {
+    method: 'POST',
+    body: payload
+  }).catch(function() {}); // silent fail — download still works
+
+  // Trigger PDF download
+  setTimeout(function() {
+    var a = document.createElement('a');
+    a.href = '/playbook/gsd_sales_playbook.pdf';
+    a.download = 'GSD_Associates_VP_Sales_Playbook.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    btn.textContent = '\u2705 Downloading now — check your downloads!';
+  }, 400);
+});
+</script>
+  <!-- GSD AI Chat Widget -->
+  <script src="/chat-widget.js" defer></script>
+    <script>
+    // Handle smooth scroll to anchors on page load
+    window.addEventListener("load", function() {
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    });
+    </script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body>
+</html>
