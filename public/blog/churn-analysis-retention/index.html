@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reducing SaaS Churn: The Analysis Framework That Works | GSD Associates</title>
+  <meta name="description" content="Reducing SaaS Churn: The Analysis Framework That Works — Practical insight from a Fractional VP of Sales who helped build a $100M SaaS company.">
+  <link rel="canonical" href="https://www.gsdassociates.net/blog/churn-analysis-retention">
+  <meta property="og:title" content="Reducing SaaS Churn: The Analysis Framework That Works">
+  <meta property="og:description" content="Practical insight from a Fractional VP of Sales who helped build a $100M SaaS company.">
+  <meta property="og:url" content="https://www.gsdassociates.net/blog/churn-analysis-retention">
+  <meta property="og:type" content="article">
+  <script>!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://b2bjsstore.s3.us-west-2.amazonaws.com/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("GNLKQHPL136Q");</script>
+  <link rel="stylesheet" href="/tailwind.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>* { font-family: 'Inter', sans-serif; } .gradient-text { background: linear-gradient(135deg,#1e3a8a,#f97316); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; } article h2 { font-size:1.5rem; font-weight:800; color:#111827; margin-top:2.5rem; margin-bottom:1rem; } article h3 { font-size:1.2rem; font-weight:700; color:#1f2937; margin-top:2rem; margin-bottom:0.75rem; } article p { margin-bottom:1.25rem; line-height:1.75; } article ul, article ol { padding-left:1.5rem; margin-bottom:1.25rem; } article li { margin-bottom:0.5rem; line-height:1.75; } article strong { color:#1f2937; }</style>
+  <script src="/tracking.js"></script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','947084454377360');fbq('track','PageView');</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Reducing SaaS Churn: The Analysis Framework That Works","author":{"@type":"Person","name":"Michael Flournoy","url":"https://www.gsdassociates.net/about"},"publisher":{"@type":"Organization","name":"GSD Associates","url":"https://www.gsdassociates.net"},"datePublished":"2026-06-19","mainEntityOfPage":"https://www.gsdassociates.net/blog/churn-analysis-retention"}</script>
+</head>
+<body class="bg-gray-50">
+  <nav class="fixed w-full bg-white shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="/" class="text-2xl font-bold gradient-text">GSD Associates</a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="/#services" class="text-gray-700 hover:text-blue-700 font-medium">Services</a>
+          <a href="/blog/" class="text-gray-700 hover:text-blue-700 font-medium">Blog</a>
+          <a href="/about/" class="text-gray-700 hover:text-blue-700 font-medium">About</a>
+          <a href="#" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book Strategy Call</a>
+        </div>
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden text-gray-700"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
+      <a href="/" class="block text-gray-700 font-medium">Home</a>
+      <a href="/blog/" class="block text-blue-700 font-bold">Blog</a>
+      <a href="/about/" class="block text-gray-700 font-medium">About</a>
+      <a href="#" class="block bg-orange-500 text-white px-6 py-3 rounded-full font-semibold text-center" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book Strategy Call</a>
+    </div>
+  </nav>
+  <div class="pt-28 pb-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-sm text-gray-500 mb-6"><a href="/" class="hover:text-blue-700">Home</a> <span class="mx-2">›</span><a href="/blog/" class="hover:text-blue-700">Blog</a> <span class="mx-2">›</span><span>Reducing SaaS Churn: The Analysis Framework That Works</span></div>
+      <div class="mb-10">
+        <span class="inline-block bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">Retention</span>
+        <h1 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-6">Reducing SaaS Churn: The Analysis Framework That Works</h1>
+        <div class="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
+          <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">M</div>
+          <div><div class="font-semibold text-gray-900">Michael Flournoy</div><div class="text-sm text-gray-500">Fractional VP of Sales · June 2026 · 9 min read</div></div>
+        </div>
+      </div>
+      <div class="h-2 bg-gradient-to-r from-blue-900 via-blue-600 to-orange-500 rounded-full mb-10"></div>
+      <article class="text-gray-700 leading-relaxed">
+        <p>Churn is the most honest feedback your business gets. And most companies don't listen to it.</p>
+<p>They track it — in a spreadsheet, in their CRM, maybe in a dashboard. But tracking churn and understanding churn are completely different problems. Most companies track. Almost none understand.</p>
+<p>Here's the diagnostic framework I use with clients to actually reduce churn — not just measure it.</p>
+<h2>Step 1: Diagnose Before You Fix</h2>
+<p>The most common mistake companies make with churn is jumping to solutions before they understand causes. They implement QBRs, add CSM headcount, build a health score, send "we miss you" emails — and churn stays exactly the same.</p>
+<p>Before you do anything else, answer three questions:</p>
+<ol><li><strong>When is churn happening?</strong> (Which month in the customer lifecycle? Month 3? Month 12? At first renewal?)</li><li><strong>Who is churning?</strong> (Which customer segment, vertical, deal size, or lead source has the highest churn rate?)</li><li><strong>Why are they churning?</strong> (Not "what do they say in the cancellation survey" — what's the real reason?)</li></ol>
+<p>The answer to question 3 almost never matches what customers say. "Price" is the #1 cited reason for churn. It's the real reason maybe 20% of the time. The other 80% is product-market fit, implementation failure, or a change in the customer's business.</p>
+<h2>Step 2: Exit Interviews (The Data You're Not Collecting)</h2>
+<p>Every churned customer should get a real exit interview. Not a 3-question survey. A 15-minute phone call with someone senior enough that the customer feels heard.</p>
+<p>The goal is not to win them back (though that happens). The goal is to understand what failed. Ask:</p>
+<ul><li>"What problem were you trying to solve when you signed up?"</li><li>"Did we help you solve it? When did that change?"</li><li>"What would have had to be different for you to stay?"</li><li>"What are you doing instead?"</li></ul>
+<p>That last question is the most important. The alternative they chose tells you who your real competition is — and it's often not who you think. At Whip Around, we discovered that a significant portion of churned customers weren't going to a competitor — they were going back to spreadsheets. That told us we had an implementation and adoption problem, not a competitive problem.</p>
+<h2>Step 3: Cohort Analysis (Where the Patterns Hide)</h2>
+<p>Aggregate churn rate is nearly useless for diagnosis. 10% annual churn is the same number whether you're churning your earliest customers or your most recent ones — but those are completely different problems.</p>
+<p>Run cohort analysis: group customers by when they signed up (month 1, month 2, etc.) and track their retention curve. You're looking for:</p>
+<ul><li><strong>Early cohorts churning faster than recent ones</strong> — your product improved, but your oldest customers have the worst experience</li><li><strong>Recent cohorts churning faster than early ones</strong> — you're acquiring the wrong customers (ICP drift)</li><li><strong>Churn spike at a specific month</strong> — usually indicates a failure point in the customer journey (failed onboarding, no QBR at month 6, ignored renewal conversation)</li></ul>
+<p>The month-3 churn spike is the most common. It means customers who went live never hit their first value milestone. They signed up with good intentions, ran out of momentum at implementation, and quietly stopped logging in. Six months later, they cancel.</p>
+<h2>Step 4: The Red Flag Indicators</h2>
+<p>By the time a customer calls to cancel, you've already lost them. Churn prevention happens 60-90 days before the actual cancellation.</p>
+<p>Build an early warning system around behavioral signals:</p>
+<ul><li><strong>Login frequency drop</strong> — a customer who logs in daily and then stops for 2 weeks is at risk</li><li><strong>Feature adoption stall</strong> — if they've only ever used 2 of your 8 core features, they've never gotten full value</li><li><strong>Support ticket velocity increase</strong> — a spike in support tickets often precedes churn, especially if tickets go unresolved</li><li><strong>Executive sponsor change</strong> — the person who bought your product leaves the company. The new person didn't buy it. They're a flight risk.</li><li><strong>Missed QBR</strong> — when a customer starts skipping scheduled business reviews, they're disengaging</li></ul>
+<p>Every one of these is an intervention trigger. Your CS team should have a playbook for each one.</p>
+<h2>What Actually Reduces Churn (vs. What Feels Like It Does)</h2>
+<p><strong>What works:</strong></p>
+<ul><li>Faster time-to-first-value (reduce the distance between "signed" and "this is working")</li><li>Proactive outreach at known churn-risk moments (month 3, first renewal, executive sponsor change)</li><li>Tighter ICP qualification upfront (don't close customers who won't succeed)</li><li>Product adoption milestones baked into the onboarding playbook</li></ul>
+<p><strong>What doesn't work (as well as advertised):</strong></p>
+<ul><li>Health scores that no one acts on</li><li>Automated "we haven't heard from you" emails</li><li>Adding CSM headcount without changing the process</li><li>Discounting at renewal to keep a disengaged customer one more year</li></ul>
+<p>That last one deserves emphasis. Discounting a churning customer to extend the contract is expensive retention. You're paying to delay the inevitable while masking the real problem in your metrics. The better answer is to fix the failure point that caused the disengagement.</p>
+<h2>The Metric That Matters Most</h2>
+<p>Net Revenue Retention. Not gross churn. NRR captures both what you're losing and what you're growing — expansions, upsells, cross-sells against churned revenue. A company with 120% NRR is growing even if they churn some customers, because their existing customers are buying more.</p>
+<p>If your NRR is below 100%, you're shrinking in your existing customer base. Fix that before scaling acquisition. More new customers into a leaky bucket just means faster spending.</p>
+<p>If you want to do a real churn diagnostic for your company — not just track the number but understand it — <a href="#" class="" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">book a 30-minute call</a>. We'll map your cohorts, identify your failure points, and build a retention playbook that addresses the actual cause.</p>
+      </article>
+      <div class="mt-16 bg-gradient-to-r from-blue-900 to-blue-700 rounded-3xl p-10 text-center text-white">
+        <h2 class="text-2xl font-black mb-3">Ready to Build a Sales System That Scales?</h2>
+        <p class="text-blue-200 mb-6">30 minutes. No pitch. Just a straight answer on what your sales team needs.</p>
+        <a href="#" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg inline-block hover:from-orange-600 hover:to-orange-700 transition" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book a Free Strategy Call →</a>
+      </div>
+      <div class="mt-12"><h3 class="text-xl font-bold text-gray-900 mb-6">More from the Blog</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="/blog/quota-attainment-100-percent/" class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition border border-gray-100"><span class="text-xs font-bold text-orange-500 uppercase">Sales Ops</span><p class="font-semibold text-gray-900 mt-2 text-sm">How to Set Sales Quotas for B2B SaaS</p></a>
+          <a href="/blog/sales-team-onboarding/" class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition border border-gray-100"><span class="text-xs font-bold text-orange-500 uppercase">Team Building</span><p class="font-semibold text-gray-900 mt-2 text-sm">How to Build a B2B Sales Team from Scratch</p></a>
+          <a href="/blog/fractional-vp-sales-month-1-deliverables/" class="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition border border-gray-100"><span class="text-xs font-bold text-orange-500 uppercase">Case Study</span><p class="font-semibold text-gray-900 mt-2 text-sm">What a Fractional VP Does in Month 1</p></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-gray-900 text-gray-400 text-center py-8 text-sm"><p>© 2026 GSD Associates · <a href="/" class="hover:text-white">gsdassociates.net</a> · <a href="/blog/" class="hover:text-white">Blog</a></p></footer>
+
+<!-- Calendly Modal (site-wide) -->
+<div id="calendly-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;overflow-y:auto;">
+  <div style="background:white;border-radius:20px;padding:0;max-width:660px;width:95%;margin:20px auto;position:relative;overflow:hidden;">
+    <button onclick="document.getElementById('calendly-modal').style.display='none'; document.body.style.overflow='auto';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:28px;cursor:pointer;color:#666;z-index:10000;line-height:1;">&times;</button>
+    <iframe id="calendly-iframe" data-src="https://calendly.com/gsdassociatesllc/30min?hide_gdpr_banner=1&primary_color=ea580c" src="" width="100%" height="580" frameborder="0" scrolling="yes" style="display:block;border-radius:20px;"></iframe>
+  </div>
+</div>
+<script>
+document.getElementById('calendly-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var m = document.getElementById('calendly-modal');
+    if (m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
+  }
+});
+</script>
+  <script src="/gsd-book-modal.js" defer></script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body>
+</html>

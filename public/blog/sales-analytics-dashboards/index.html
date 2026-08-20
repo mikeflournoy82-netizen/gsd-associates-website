@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Sales Analytics Dashboards That Drive Action</title>
+    <meta name="description" content="Learn how to build sales analytics dashboards that actually drive decisions. From pipeline visibility to revenue forecasting, here's what matters.">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 2.5em; margin-bottom: 0.5em; color: #1a1a1a; }
+        h2 { font-size: 1.8em; margin-top: 1.5em; margin-bottom: 0.5em; color: #222; }
+        h3 { font-size: 1.3em; margin-top: 1.2em; color: #333; }
+        p { margin-bottom: 1em; }
+        .meta { color: #666; font-size: 0.95em; margin-bottom: 2em; }
+        .cta { background: #f0f0f0; padding: 20px; border-radius: 8px; margin: 2em 0; text-align: center; }
+        .cta a { background: #0066cc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; display: inline-block; }
+        ul { margin-bottom: 1em; }
+        li { margin-bottom: 0.5em; }
+        code { background: #f5f5f5; padding: 2px 6px; border-radius: 3px; font-family: 'Monaco', monospace; }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Building Sales Analytics Dashboards That Drive Action</h1>
+        <div class="meta">Published August 14, 2026 | 7-minute read</div>
+
+        <p>Most sales dashboards are theater. Beautiful charts. Real-time updates. Lots of red, yellow, green indicators. And nobody uses them to make decisions.</p>
+
+        <p>Why? Because they measure the wrong things. Or measure too many things. Or present data in ways that don't answer the questions your team actually asks every day.</p>
+
+        <p>Here's what a dashboard that actually drives action looks like — and how to build it.</p>
+
+        <h2>The Problem With "Comprehensive" Dashboards</h2>
+
+        <p>Every VP of Sales wants to see everything:</p>
+        <ul>
+            <li>Pipeline by stage</li>
+            <li>Win/loss rates</li>
+            <li>Sales cycle length</li>
+            <li>Deal size trends</li>
+            <li>Activity metrics (calls, emails, meetings)</li>
+            <li>Forecast accuracy</li>
+            <li>Territory performance</li>
+            <li>Quota attainment</li>
+            <li>Churn analysis</li>
+            <li>And 15 other things</li>
+        </ul>
+
+        <p>The result? A dashboard so dense that nobody knows where to look. Your team checks it quarterly because reviewing it feels like homework, not like a tool that helps them win.</p>
+
+        <p><strong>The fix:</strong> Build three dashboards instead of one. Each answers a specific question a different person asks.</p>
+
+        <h2>The Three Dashboards Your Team Actually Needs</h2>
+
+        <h3>1. The Daily Execution Dashboard (for AEs)</h3>
+
+        <p>This answers: <em>"What am I closing this month?"</em></p>
+
+        <p>What goes on it:</p>
+        <ul>
+            <li><strong>Personal pipeline</strong> — deals by stage, close date, deal size</li>
+            <li><strong>Deals closing this month</strong> — sorted by close date, highlighted by confidence level</li>
+            <li><strong>Stuck deals</strong> — anything in stage for >45 days without activity</li>
+            <li><strong>Activity log</strong> — last action, next step, days since last touch</li>
+            <li><strong>Win/loss ratio</strong> — this quarter vs last quarter</li>
+        </ul>
+
+        <p>This is not a report. It's a to-do list. An AE should be able to glance at it and see: "OK, I need to close these 3 deals, unblock that 1, and follow up on those 2." That's it.</p>
+
+        <p><strong>Update frequency:</strong> Real-time or daily. AEs check this multiple times per day.</p>
+
+        <h3>2. The Weekly Leadership Dashboard (for you)</h3>
+
+        <p>This answers: <em>"Are we on track to hit plan?"</em></p>
+
+        <p>What goes on it:</p>
+        <ul>
+            <li><strong>Monthly/quarterly forecast vs plan</strong> — simple: on track, at risk, or off track</li>
+            <li><strong>Pipeline coverage ratio</strong> — pipeline value ÷ quota. Should be 3-5x for SaaS</li>
+            <li><strong>Deals at risk</strong> — anything flagged as "at risk" or stuck for 30+ days</li>
+            <li><strong>Team activity trend</strong> — meetings/demos/calls this week vs last week vs average</li>
+            <li><strong>Conversion rates by stage</strong> — stage to stage (discovery → demo → proposal → close)</li>
+            <li><strong>Average sales cycle length</strong> — trending vs historical</li>
+            <li><strong>Upcoming closes (next 30 days)</strong> — deal size, confidence, owner</li>
+        </ul>
+
+        <p>This is your weekly board review. In 5 minutes, you know: are we winning or losing? What's the one thing I need to fix today?</p>
+
+        <p><strong>Update frequency:</strong> Weekly (Friday morning before your team call). Not real-time. You're making decisions with a 24-48 hour lag, and that's fine.</p>
+
+        <h3>3. The Monthly Retrospective Dashboard (for the board)</h3>
+
+        <p>This answers: <em>"How are we trending?"</em></p>
+
+        <p>What goes on it:</p>
+        <ul>
+            <li><strong>Revenue closed (actual)</strong> — this month, last month, this year</li>
+            <li><strong>Pipeline generated (new opps created)</strong> — sourced, inbound, partner</li>
+            <li><strong>Win rate</strong> — percentage of deals closed ÷ deals presented</li>
+            <li><strong>Average deal size</strong> — trending</li>
+            <li><strong>Sales cycle (days)</strong> — trending</li>
+            <li><strong>Quota attainment by rep</strong> — top performer, at risk, underperforming</li>
+            <li><strong>Churn rate</strong> — if applicable</li>
+            <li><strong>Cost per acquisition</strong> — marketing spend ÷ new customers</li>
+        </ul>
+
+        <p>This is your historical view. You're not making decisions here — you're tracking trends and spotting patterns.</p>
+
+        <p><strong>Update frequency:</strong> Monthly (first business day of the month).</p>
+
+        <h2>How to Actually Build These</h2>
+
+        <p><strong>Option 1: Use your CRM's built-in dashboards</strong></p>
+        <p>Salesforce, HubSpot, Pipedrive, Close, and most other CRMs have dashboards. Start there. Customize what you have before building from scratch.</p>
+
+        <p><strong>Option 2: Use a BI tool</strong></p>
+        <p>If you have real data volume (1000+ deals/year) and need complex calculations, use Tableau, Looker, or Power BI. But honestly? Most early-stage SaaS teams don't need this yet.</p>
+
+        <p><strong>Option 3: Build a spreadsheet</strong></p>
+        <p>Google Sheets connected to your CRM API. It's not sexy, but it works. Pull pipeline data daily, build your views, set alerts.</p>
+
+        <h2>The Real Secret: Build for Questions, Not Metrics</h2>
+
+        <p>Every metric on your dashboard should answer a specific question someone on your team asks every week:</p>
+
+        <ul>
+            <li><strong>"Are we going to hit plan?"</strong> → Monthly forecast vs plan</li>
+            <li><strong>"What am I closing this week?"</strong> → Personal pipeline by close date</li>
+            <li><strong>"Why is this deal stuck?"</strong> → Days in stage + last activity</li>
+            <li><strong>"Who's at risk of missing quota?"</strong> → YTD actuals vs plan by rep</li>
+            <li><strong>"How long is our sales cycle?"</strong> → Average days from opportunity to close</li>
+        </ul>
+
+        <p>If a metric doesn't answer a real question your team asks, delete it. It's just noise.</p>
+
+        <h2>One More Thing: Make It Actionable</h2>
+
+        <p>The best dashboard has one more layer: <strong>alerts</strong>.</p>
+
+        <ul>
+            <li>Deal stuck for 30+ days → flag it</li>
+            <li>Close date missed → highlight it</li>
+            <li>Win rate drops below target → alert</li>
+            <li>Activity below threshold → send reminder</li>
+        </ul>
+
+        <p>Now your dashboard doesn't just show what happened. It tells you what to do about it.</p>
+
+        <h2>The Takeaway</h2>
+
+        <p>Sales analytics dashboards are only valuable if they're used. Most aren't used because they're built for reporting, not for decision-making.</p>
+
+        <p>Build three focused dashboards instead of one monster dashboard. Make each one answer a specific question. Add alerts so your team doesn't have to dig. Measure the metrics that matter, not everything you can measure.</p>
+
+        <p>Then watch your team actually use it. Because now it helps them close more deals.</p>
+
+        <div class="cta">
+            <p><strong>Building a sales team from scratch?</strong></p>
+            <p>Let's talk about what your analytics stack should look like.</p>
+            <a href="https://calendly.com/gsdassociatesllc/30min">Schedule a call</a>
+        </div>
+    </article>
+</body>
+</html>

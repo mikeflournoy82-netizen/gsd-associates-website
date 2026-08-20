@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5BN79LCM6');
+    </script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>CRM Setup for Early-Stage SaaS: What Actually Matters | GSD Associates</title><meta name="description" content="Most early-stage SaaS teams set up their CRM wrong and spend months paying for it. Here's what to build, what to skip, and what order to do it in."><link rel="canonical" href="https://gsdassociates.net/blog/crm-setup-early-stage-saas/"><meta property="og:title" content="CRM Setup for Early-Stage SaaS: What Actually Matters"><meta property="og:description" content="Most early-stage SaaS teams set up their CRM wrong. Here's what to build, what to skip, and what order to do it in."><meta property="og:url" content="https://www.gsdassociates.net/blog/crm-setup-early-stage-saas/"><meta property="og:type" content="article"><script>!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://b2bjsstore.s3.us-west-2.amazonaws.com/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("GNLKQHPL136Q");</script><link rel="stylesheet" href="/tailwind.min.css"><link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style>* { font-family: 'Inter', sans-serif; } .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #ea580c 100%) !important; -webkit-background-clip: text !important; -webkit-text-fill-color: transparent !important; background-clip: text !important; color: transparent !important; display: inline-block !important; }</style><script src="/tracking.js"></script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','947084454377360');fbq('track','PageView');</script><script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/22350871.js"></script>
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+function gtagSendEvent(url) {
+  var callback = function() { if (typeof url === 'string') { window.location = url; } };
+  gtag('event', 'ads_conversion_Book_appointment_1', {
+    'event_callback': callback, 'event_timeout': 2000
+  });
+  return false;
+}
+</script>
+
+<!-- Event snippet for Submit lead form conversion -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function() { if (typeof(url) != 'undefined') { window.location = url; } };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17945394532/60bMCLKG75ccEOT6g-1C',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+</head>
+<body class="bg-gray-50">
+<nav class="fixed w-full bg-white shadow-lg z-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-20"><a href="/" class="text-2xl font-bold gradient-text">GSD Associates</a><div class="hidden md:flex space-x-8 items-center"><a href="/#services" class="text-gray-700 hover:text-blue-700 font-medium">Pricing</a><a href="/blog/" class="text-gray-700 hover:text-blue-700 font-medium">Blog</a><a href="/resources/" class="text-gray-700 hover:text-blue-700 font-medium">Resources</a><a href="/about/" class="text-gray-700 hover:text-blue-700 font-medium">About</a><a href="/team/" class="text-gray-700 hover:text-blue-700 font-medium">Team</a><a href="#" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book Strategy Call</a></div></div></div></nav>
+
+<main class="pt-28 pb-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto">
+
+    <div class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-blue-700">Home</a> / <a href="/blog/" class="hover:text-blue-700">Blog</a> / CRM Setup for Early-Stage SaaS
+    </div>
+
+    <div class="bg-blue-50 border-l-4 border-blue-700 px-5 py-3 rounded mb-8 text-blue-900 text-sm font-medium">
+      <i class="fas fa-user-tie mr-2"></i>Written by Michael Flournoy — Fractional VP of Sales, Whip Around ($100M exit), Fleetmatics ($2.6B exit).
+    </div>
+
+    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">CRM Setup for Early-Stage SaaS: What Actually Matters</h1>
+
+    <div class="bg-blue-50 border-l-4 border-blue-600 rounded-r-lg p-5 mb-8 mt-2">
+      <p class="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-1">The Short Version</p>
+      <p class="text-gray-800 text-base font-medium leading-relaxed">Most early-stage SaaS teams overbuild their CRM on day one — 40 custom fields, 8 pipeline stages, reports nobody looks at. Then nobody uses it. Here's the minimum viable CRM setup that actually gets used and actually tells you something useful.</p>
+    </div>
+
+    <p class="text-xl text-gray-500 mb-8">Published June 2026 &nbsp;·&nbsp; 7 min read</p>
+
+    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+
+      <p>I've walked into a lot of CRMs at early-stage SaaS companies. Most of them have the same problem: they were set up by someone who read a HubSpot tutorial and then never touched again.</p>
+
+      <p>Hundreds of contacts with no activity. Pipeline stages that don't match how deals actually move. Custom fields nobody fills in. Reports that take 20 minutes to run and don't answer any questions anyone is actually asking.</p>
+
+      <p>The CRM becomes a graveyard. Reps stop logging activity because nothing useful comes out of it. Leadership stops trusting the data. And you're flying blind on the most important part of your business.</p>
+
+      <p>Here's how to fix it — or set it up right from the start.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">Rule 1: Your pipeline stages need exit criteria, not names</h2>
+
+      <p>The most common CRM mistake I see: pipeline stages that are just vibes.</p>
+
+      <p>"Prospecting." "Qualified." "Proposal." "Negotiation." These labels mean nothing unless every rep agrees on exactly what it takes for a deal to move from one to the next.</p>
+
+      <p>For each stage, define one thing: <strong>what has to be true for a deal to be here?</strong></p>
+
+      <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 space-y-4">
+        <div>
+          <p class="font-bold text-gray-900">Discovery Complete</p>
+          <p class="text-gray-600 text-sm">Rep has confirmed: budget range, decision-maker identified, compelling event with a date, at least one pain tied to a business outcome</p>
+        </div>
+        <div>
+          <p class="font-bold text-gray-900">Demo Scheduled</p>
+          <p class="text-gray-600 text-sm">Demo on calendar with the economic buyer present — not just a champion or end user</p>
+        </div>
+        <div>
+          <p class="font-bold text-gray-900">Proposal Sent</p>
+          <p class="text-gray-600 text-sm">Proposal sent AND verbal confirmation that the contact has read it and will present it internally</p>
+        </div>
+        <div>
+          <p class="font-bold text-gray-900">Verbal Close</p>
+          <p class="text-gray-600 text-sm">Buyer has said yes verbally, next step is contract/legal — not "they seemed really interested"</p>
+        </div>
+      </div>
+
+      <p>If a rep can't confirm those criteria, the deal doesn't belong in that stage. This single change will make your pipeline accurate within 30 days.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">Rule 2: Five custom fields, max</h2>
+
+      <p>Pick the five things you actually need to know about every deal to run your business. That's it.</p>
+
+      <p>For most B2B SaaS companies at the early stage, those five are:</p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>ICP fit</strong> (Yes / No / TBD) — does this company match your defined ideal customer profile</li>
+        <li><strong>Deal source</strong> — outbound, inbound, referral, event</li>
+        <li><strong>Economic buyer name</strong> — not the champion, the actual decision-maker</li>
+        <li><strong>Compelling event</strong> — what happens if they don't buy by X date</li>
+        <li><strong>Next step + date</strong> — one field, forces the rep to commit to a concrete action</li>
+      </ul>
+
+      <p>Everything else can wait until you're at $5M ARR and actually need the data. Adding fields you don't use trains reps to ignore the CRM.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">Rule 3: One report that matters more than all others</h2>
+
+      <p>The report I look at every week: deals that have been in the same stage for more than 14 days with no activity logged.</p>
+
+      <p>That's it. That report tells me everything I need to know about whether my reps are actually working their pipeline or just parking deals and hoping.</p>
+
+      <p>Every deal on that list is either going to get a concrete next step this week, or it's getting moved to a "Stalled" stage and taken off the active forecast. No exceptions.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">Rule 4: Make logging activity as easy as possible</h2>
+
+      <p>Reps don't log activity because it takes too long and nothing useful comes out of it. Fix both of those.</p>
+
+      <p>For the "takes too long" problem: set up email and calendar sync so activity logs automatically. Make the rep's job at the end of a call just logging the outcome and the next step — two fields, 30 seconds.</p>
+
+      <p>For the "nothing useful comes out" problem: start using the data in pipeline reviews. When a rep sees that their CRM activity directly affects how their deals are reviewed, they start logging. Accountability creates compliance.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">Which CRM for early-stage SaaS?</h2>
+
+      <p>For most companies under $3M ARR I recommend HubSpot (free tier or Starter) or Pipedrive. Both are simple enough that reps will actually use them, and both have the reporting you need without requiring a full-time admin to maintain.</p>
+
+      <p>Salesforce is almost always overkill until you have a dedicated RevOps person. If someone is recommending Salesforce to a 5-person sales team, they are optimizing for their implementation fee, not your outcome.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10">The real point</h2>
+
+      <p>A CRM doesn't make you money. A CRM gives you visibility into where you're losing money. The goal is the minimum setup that gives you accurate pipeline data and forces rep accountability — nothing more.</p>
+
+      <p>You can always add complexity later. You can't easily subtract it once reps have learned to work around it.</p>
+
+    </div>
+
+    <div class="mt-12 bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl p-8 text-white text-center">
+      <h3 class="text-2xl font-black mb-3">Your CRM is only as good as your process</h3>
+      <p class="text-blue-100 mb-6">Let's talk about what your pipeline data is actually telling you — and what it's hiding.</p>
+      <a href="#" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-lg transition" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book Free Strategy Call &rarr;</a>
+    </div>
+
+    <div class="mt-12">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">Related Articles</h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a href="/blog/sales-ops-metrics-track/" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition">
+          <p class="text-xs text-orange-500 font-semibold uppercase mb-1">Metrics</p>
+          <p class="font-semibold text-gray-900">The Sales Metrics Early-Stage SaaS Should Actually Track</p>
+        </a>
+        <a href="/blog/pipeline-review-meetings/" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition">
+          <p class="text-xs text-orange-500 font-semibold uppercase mb-1">Management</p>
+          <p class="font-semibold text-gray-900">How to Run a Pipeline Review That Actually Works</p>
+        </a>
+        <a href="/blog/sales-playbook-template/" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition">
+          <p class="text-xs text-orange-500 font-semibold uppercase mb-1">Process</p>
+          <p class="font-semibold text-gray-900">Sales Playbook Template for B2B SaaS</p>
+        </a>
+        <a href="/blog/fractional-vp-sales-month-1-deliverables/" class="block p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-400 transition">
+          <p class="text-xs text-orange-500 font-semibold uppercase mb-1">Engagement</p>
+          <p class="font-semibold text-gray-900">What to Expect in Month 1 With a Fractional VP of Sales</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
+  <p>&copy; 2026 GSD Associates. All rights reserved. &nbsp;|&nbsp; <a href="/privacy/" class="hover:text-white">Privacy</a></p>
+</footer>
+<script src="/chat-widget.js" defer></script>
+
+<!-- Calendly Modal (site-wide) -->
+<div id="calendly-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;overflow-y:auto;">
+  <div style="background:white;border-radius:20px;padding:0;max-width:660px;width:95%;margin:20px auto;position:relative;overflow:hidden;">
+    <button onclick="document.getElementById('calendly-modal').style.display='none'; document.body.style.overflow='auto';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:28px;cursor:pointer;color:#666;z-index:10000;line-height:1;">&times;</button>
+    <iframe id="calendly-iframe" data-src="https://calendly.com/gsdassociatesllc/30min?hide_gdpr_banner=1&primary_color=ea580c" src="" width="100%" height="580" frameborder="0" scrolling="yes" style="display:block;border-radius:20px;"></iframe>
+  </div>
+</div>
+<script>
+document.getElementById('calendly-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    this.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var m = document.getElementById('calendly-modal');
+    if (m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
+  }
+});
+</script>
+  <script src="/gsd-book-modal.js" defer></script>
+  <script src="/gsd-dynamic.js" defer></script>
+</body></html>
