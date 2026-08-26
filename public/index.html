@@ -1995,6 +1995,25 @@ fbq('init','947084454377360');fbq('track','PageView');
     </script>
 
   <script src="/gsd-dynamic.js" defer></script>
+  
+  <!-- FAQ Dropdown Toggle -->
+  <script>
+  function toggleFAQ(element) {
+    const answer = element.querySelector('.faq-answer');
+    const icon = element.querySelector('i');
+    
+    if (!answer) return;
+    
+    // Toggle visibility
+    answer.classList.toggle('hidden');
+    
+    // Rotate icon
+    if (icon) {
+      icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+      icon.style.transition = 'transform 0.3s ease';
+    }
+  }
+  </script>
 </body>
 </html>
   
