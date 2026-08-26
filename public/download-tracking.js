@@ -27,7 +27,7 @@ window.gsdTrackResourceDownload = async function(resourceName, email, name = '')
   // 2. Send immediate email alert to Michael
   if (TRACKING_CONFIG.enable_email_alerts) {
     try {
-      const response = await fetch('http://localhost:3000/api/send-download-alert', {
+      const response = await fetch('/api/send-download-alert', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
