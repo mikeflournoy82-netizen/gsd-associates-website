@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow old/test pages
+Disallow: /start-test/
+Disallow: /go/
+
+# Sitemap location
+Sitemap: https://gsdassociates.net/sitemap.xml
