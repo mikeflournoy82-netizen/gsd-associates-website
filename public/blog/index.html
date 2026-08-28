@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics 4 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Leadership Blog - GSD Associates</title>
+    <meta name="description" content="Practical sales leadership insights for B2B SaaS founders and CEOs. 43+ articles on pipeline management, cold email, fractional VP of Sales, quota setting, and more.">
+    <link rel="canonical" href="https://www.gsdassociates.net/blog/">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #1e3a8a, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .post-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .post-card:hover { transform: translateY(-4px); }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+    <script src="/tracking.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5BN79LCM6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,29 +23,6 @@
       gtag('js', new Date());
       gtag('config', 'G-Q5BN79LCM6');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Leadership Blog - GSD Associates</title>
-    <meta name="description" content="Practical sales leadership insights for B2B SaaS founders and CEOs. Pipeline management, cold email, fractional VP of Sales, quota setting, forecasting, and more.">
-    <link rel="canonical" href="https://www.gsdassociates.net/blog//">
-    <link rel="stylesheet" href="/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        .gradient-text { background: linear-gradient(135deg, #1e3a8a, #ea580c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .cta-button { background: linear-gradient(135deg, #ea580c, #dc2626); }
-        .post-card { transition: transform 0.2s, box-shadow 0.2s; }
-        .post-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .filter-btn { transition: all 0.2s; cursor: pointer; }
-        .filter-btn.active { background: #1e3a8a; color: white; border-color: #1e3a8a; }
-        .sticky-filters { position: sticky; top: 100px; }
-    </style>
-    <script>!function(key){if(window.reb2b)return;window.reb2b={loaded:true};var s=document.createElement("script");s.async=true;s.src="https://ddwl4m2hdecbv.cloudfront.net/b/"+key+"/"+key+".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s,document.getElementsByTagName("script")[0]);}("GNLKQHPL136Q");</script>
-    <script src="/tracking.js"></script>
-
-    <!-- Calendly Conversion Tracking -->
-    <script src="/calendly-conversion.js" defer></script>
-
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -40,164 +31,601 @@
             <div class="flex justify-between items-center h-16 sm:h-20">
                 <a href="/" class="text-2xl font-bold gradient-text">GSD Associates</a>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="https://www.gsdassociates.net/#services" class="text-gray-700 hover:text-blue-700 font-medium">Services</a>
+                    <a href="/#services" class="text-gray-700 hover:text-blue-700 font-medium">Services</a>
                     <a href="/products/" class="text-gray-700 hover:text-blue-700 font-medium">Products</a>
-                    <a href="/blog/" class="text-blue-700 font-medium">Blog</a>
-                    <a href="#" class="cta-button text-white px-6 py-2 rounded-full font-semibold" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book a Call</a>
+                    <a href="/blog/" class="text-blue-700 font-bold">Blog</a>
+                    <a href="https://calendly.com/gsdassociatesllc/30min" target="_blank" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:from-orange-600 hover:to-orange-700 transition">Book a Call</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <div class="pt-32 pb-8 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+    <!-- Hero Section -->
+    <div class="pt-32 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-orange-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-black mb-4">Sales Leadership Blog</h1>
-            <p class="text-xl text-blue-100 max-w-2xl mx-auto">Practical tactics for B2B founders ready to scale revenue.</p>
+            <h1 class="text-4xl md:text-5xl font-black text-white mb-4">Sales Leadership Blog</h1>
+            <p class="text-xl text-blue-100 mb-3">Practical insights for B2B SaaS founders and CEOs</p>
+            <p class="text-lg text-blue-200"><strong>43</strong> articles • Research-backed • Actionable frameworks</p>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            
-            <!-- Sidebar Filters -->
-            <div class="lg:col-span-1">
-                <div class="sticky-filters bg-white rounded-2xl p-6 shadow-md border border-gray-100">
-                    <h3 class="font-black text-lg mb-4 text-gray-900">Filter by Category</h3>
-                    <div class="space-y-2">
-                        <button onclick="filterPosts('all')" class="filter-btn active w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="all">
-                            <span>📋</span> All Posts
-                        </button>
-                        <button onclick="filterPosts('fractional-vp')" class="filter-btn w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="fractional-vp">
-                            <span>👔</span> Fractional VP
-                        </button>
-                        <button onclick="filterPosts('team-hiring')" class="filter-btn w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="team-hiring">
-                            <span>👥</span> Team & Hiring
-                        </button>
-                        <button onclick="filterPosts('pipeline')" class="filter-btn w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="pipeline">
-                            <span>📊</span> Pipeline
-                        </button>
-                        <button onclick="filterPosts('outreach')" class="filter-btn w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="outreach">
-                            <span>📧</span> Outreach
-                        </button>
-                        <button onclick="filterPosts('case-study')" class="filter-btn w-full text-left px-4 py-3 rounded-lg border border-gray-300 text-sm font-semibold" data-filter="case-study">
-                            <span>🏆</span> Case Studies
-                        </button>
-                    </div>
-                </div>
+    <!-- Posts Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <a href="/blog/deal-acceleration-tactics/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Closing</span>
             </div>
-
-            <!-- Posts Grid -->
-            <div class="lg:col-span-3">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="post-grid">
-                    <!-- Posts will be rendered here by JavaScript -->
-                </div>
-                <div id="no-results" class="hidden text-center py-16 text-gray-500">
-                    <p class="text-lg">No posts in this category yet.</p>
-                </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Deal Acceleration Tactics That Close Deals 30% Faster</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 28, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
             </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-marketing-alignment/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Alignment</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How Fractional Sales VPs Work with Your Marketing Team</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 26, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-quota-setting-methodology/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Planning</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Setting Sales Quotas That Motivate (Not Demoralize)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 24, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/customer-advisory-board/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Strategy</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Creating a Customer Advisory Board That Drives Revenue</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 21, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/partner-channel-sales-program/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Channels</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Building a Partner/Channel Sales Program That Actually Works</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 19, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-analytics-dashboards/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Building Sales Analytics Dashboards That Drive Action</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 14, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/outbound-inbound-mix/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Go-to-Market</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The Optimal Outbound-to-Inbound Mix for $1-5M ARR SaaS</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-manager-first-100-days/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Leadership</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Your First 100 Days as a Sales Manager: The Playbook</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-series-b/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Fundraising</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Hiring a Fractional VP of Sales Before Your Series B Round</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/customer-success-handoff/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Retention</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Mastering the Sales to CS Handoff: Never Lose a Deal Again</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/how-to-hire-fractional-vp-of-sales/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How to Hire a Fractional VP of Sales: The Complete Guide (2026)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vs-full-time-sales/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Hiring</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Fractional VP of Sales vs. Full-Time: Which Is Right for Your Stage?</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-logistics-tech/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Fleet Tech</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Fractional VP of Sales for Logistics and Fleet Tech: What to Expect</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/outbound-vs-inbound-saas/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Go-to-Market</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Outbound vs. Inbound for SaaS: Which Channel Should You Build First?</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/pipeline-review-meetings/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Forecasting</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How to Run Weekly Pipeline Reviews That Actually Drive Revenue</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-doesnt-work-rebuttal/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">SaaStr Says Fractional VPs of Sales Don't Work. Here's Why They're Wrong (And When They're Right).</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-team-retention-best-practices/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Retention</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How to Keep Your Best Sales Reps (Retention Strategies That Work)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/discovery-call-questions/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Sales Skills</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">12 Discovery Questions That Reveal Hidden Buying Intent</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sdr-to-ae-transition/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Career Growth</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Promoting Your Best SDR to AE: What Works, What Doesn't</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/enterprise-sales-cycle-2026/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Enterprise</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Enterprise SaaS Sales Cycles in 2026: What's Changed</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-compensation-tiers/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Compensation</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Building a Sales Comp Plan for Two-Tier AE and SDR Teams</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/founder-sales-to-ae-transition/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Growth</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Transitioning From Founder-Led Sales to Your First AE: A Framework</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-stack-tools-2026/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Tools</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The Minimal Sales Stack for SaaS in 2026 (Cut Through the Noise)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/revenue-ops-framework/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">RevOps</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Building a Revenue Operations Framework That Scales from $1M to $10M</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-onboarding-new-reps/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Onboarding</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How to Onboard a New Sales Rep So They Hit Quota Faster</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/challenger-sale-framework/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Sales Methodology</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The Challenger Sale Framework: How to Win Complex B2B Deals</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/contract-negotiation-saas/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Closing</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">5 Contract Negotiation Tactics That Increase ACV Without Losing Deals</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-saas-1m-arr/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Why SaaS Companies at $1M ARR Need a Fractional VP of Sales (And Most Are Waiting Too Long)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/churn-analysis-retention/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Retention</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Reducing SaaS Churn: The Analysis Framework That Works</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-questions-answered/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Fractional VP of Sales: Your Top Questions, Answered Straight</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/quota-attainment-100-percent/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Performance</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Achieving 100% Quota Attainment: The Framework That Works</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/whip-around-100m-sales-lessons/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Whip Around's $100M Exit: What We Actually Did in Sales</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/land-and-expand-strategy/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Growth</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Land and Expand Strategy: How to Build $20K+ ARR per Account</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-playbook-template/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Sales Playbook</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">How to Build a Sales Playbook (Template Included)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-ops-metrics-track/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Metrics</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The 7 Sales Metrics Every SaaS Company Should Track (And Actually Use)</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-insurtech/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">InsurTech</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">InsurTech SaaS Sales: Why You Need Fractional Sales Leadership Now</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/demo-process-saas/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Sales Demos</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The Demo Process That Closes 60% of SaaS Deals</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/crm-setup-early-stage-saas/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">CRM Setup for Early-Stage SaaS: What Actually Matters</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/cold-email-templates/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Outreach</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Cold Email Templates That Get 8%+ Reply Rates in SaaS</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 11, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/sales-team-onboarding/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Onboarding</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The 90-Day Sales Onboarding Plan That Gets New Reps to Quota</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-month-1-deliverables/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Blog</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">What to Expect in Month 1 With a Fractional VP of Sales</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/fractional-vp-sales-logistics/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Logistics</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">The Case for Fractional Sales Leadership in Logistics SaaS</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
+
+          <a href="/blog/icp-definition-saas/" class="bg-white rounded-lg shadow-sm hover:shadow-lg transition border border-gray-200 p-6 post-card block group">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl group-hover:scale-110 transition">📝</span>
+              <span class="text-xs font-bold text-orange-500 uppercase tracking-wide">Go-to-Market</span>
+            </div>
+            <h3 class="font-bold text-gray-900 text-lg leading-tight mb-2 line-clamp-3 group-hover:text-blue-700 transition">Defining Your ICP: The Framework That Transforms Deal Flow</h3>
+            <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+              <span>Aug 5, 2026</span>
+              <span class="text-blue-700 font-semibold group-hover:translate-x-1 transition">Read →</span>
+            </div>
+          </a>
+        
         </div>
     </div>
 
-    <!-- Footer CTA -->
-    <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12 mt-16">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-black mb-3">Ready to Fix Your Sales?</h2>
-            <p class="text-blue-100 mb-6">30 minutes. No pitch. Just answers.</p>
-            <a href="#" class="cta-button text-white px-10 py-4 rounded-full font-bold inline-block" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book a Free Strategy Call</a>
+    <!-- CTA Section -->
+    <div class="bg-blue-900 text-white py-16 mt-16">
+        <div class="max-w-3xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold mb-4">Ready to build a sales system that scales?</h2>
+            <p class="text-lg text-blue-100 mb-8">Get actionable advice in a free 30-minute strategy call. No pitch—just straight answers on what your sales team needs.</p>
+            <a href="https://calendly.com/gsdassociatesllc/30min" target="_blank" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-10 py-4 rounded-full font-bold text-lg inline-block hover:from-orange-600 hover:to-orange-700 transition">Schedule a Call →</a>
         </div>
     </div>
 
-    <script>
-    const posts = [
-        { id: 1, title: "InsurTech SaaS Sales: Why You Need Fractional Sales Leadership Now", url: "/blog/fractional-vp-sales-insurtech", emoji: "🛡️", category: "fractional-vp", date: "May 2026", read: "8 min" },
-        { id: 1, title: "The Demo Process That Closes 60% of SaaS Deals", url: "/blog/demo-process-saas", emoji: "🎬", category: "pipeline", date: "May 2026", read: "10 min" },
-        { id: 1, title: "How to Build a Sales Playbook (Template Included)", url: "/blog/sales-playbook-template", emoji: "📋", category: "pipeline", date: "May 2026", read: "11 min" },
-        { id: 1, title: "Fractional VP of Sales for Logistics and Fleet Tech: What to Expect", url: "/blog/fractional-vp-sales-logistics-tech", emoji: "🚛", category: "fractional-vp", date: "May 2026", read: "8 min" },
-        { id: 1, title: "Outbound vs. Inbound for SaaS: Which Channel Should You Build First?", url: "/blog/outbound-vs-inbound-saas", emoji: "↔️", category: "outreach", date: "May 2026", read: "9 min" },
-        { id: 1, title: "CRM Setup for Early-Stage SaaS: What to Track and What to Ignore", url: "/blog/crm-setup-early-stage-saas", emoji: "🗂️", category: "pipeline", date: "May 2026", read: "10 min" },
-        { id: 2, title: "How to Handle Pricing Objections in B2B SaaS Sales", url: "/blog/b2b-saas-pricing-objections", emoji: "🤝", category: "outreach", date: "May 2026", read: "8 min" },
-        { id: 3, title: "How to Onboard a New Sales Rep So They Hit Quota Faster", url: "/blog/sales-onboarding-new-reps", emoji: "🚀", category: "team-hiring", date: "May 2026", read: "10 min" },
-        { id: 4, title: "How to Set Sales Quotas for B2B SaaS: The Formula That Actually Works", url: "/blog/saas-sales-quota-setting", emoji: "📊", category: "team-hiring pipeline", date: "April 2026", read: "9 min" },
-        { id: 5, title: "B2B Sales Forecasting for SaaS: Stop Guessing, Start Predicting", url: "/blog/b2b-sales-forecasting", emoji: "🔮", category: "pipeline", date: "April 2026", read: "10 min" },
-        { id: 6, title: "When to Hire Your First Sales Rep: The Signals Founders Miss", url: "/blog/when-to-hire-first-sales-rep", emoji: "👤", category: "team-hiring", date: "April 2026", read: "9 min" },
-        { id: 7, title: "What Is a Fractional VP of Sales? Definition, Cost & How It Works", url: "/what-is-a-fractional-vp-of-sales/", emoji: "📖", category: "fractional-vp", date: "April 2026", read: "6 min" },
-        { id: 8, title: "Is a Fractional VP Worth It? What Do They Do? How Much Should You Pay?", url: "/blog/fractional-vp-sales-questions-answered", emoji: "❓", category: "fractional-vp", date: "April 2026", read: "8 min" },
-        { id: 9, title: "SaaStr Says Fractional VPs Don't Work. Here's Why They're Wrong.", url: "/blog/fractional-vp-sales-doesnt-work-rebuttal", emoji: "⚔️", category: "fractional-vp", date: "April 2026", read: "9 min" },
-        { id: 10, title: "Why SaaS Companies at $1M ARR Need a Fractional VP of Sales", url: "/blog/fractional-vp-sales-saas-1m-arr", emoji: "📈", category: "fractional-vp", date: "April 2026", read: "8 min" },
-        { id: 11, title: "How to Hire a Fractional VP of Sales: The Complete Guide (2026)", url: "/blog/how-to-hire-fractional-vp-of-sales", emoji: "🎯", category: "fractional-vp team-hiring", date: "April 2026", read: "10 min" },
-        { id: 12, title: "From Zero to $100M: What Whip Around Taught Me About Scaling B2B Sales", url: "/blog/whip-around-100m-sales-lessons", emoji: "🚀", category: "case-study", date: "March 2026", read: "7 min" },
-        { id: 13, title: "How Much Does a Fractional VP of Sales Cost?", url: "/blog/how-much-does-fractional-vp-of-sales-cost", emoji: "💰", category: "fractional-vp", date: "March 2026", read: "8 min" },
-        { id: 14, title: "7 Signs You Need a Fractional VP of Sales", url: "/blog/signs-you-need-fractional-vp-of-sales", emoji: "⚠️", category: "fractional-vp", date: "March 2026", read: "9 min" },
-        { id: 15, title: "B2B Sales Pipeline Management: The Complete Guide", url: "/blog/b2b-sales-pipeline-management", emoji: "📋", category: "pipeline", date: "March 2026", read: "12 min" },
-        { id: 16, title: "The SaaS Sales Process That Closes More Deals", url: "/blog/saas-sales-process", emoji: "🔄", category: "pipeline", date: "March 2026", read: "10 min" },
-        { id: 17, title: "How to Build a B2B Sales Team from Scratch", url: "/blog/how-to-build-b2b-sales-team", emoji: "🏗️", category: "team-hiring", date: "March 2026", read: "11 min" },
-        { id: 18, title: "B2B Cold Email That Actually Gets Replies", url: "/blog/cold-email-b2b", emoji: "✉️", category: "outreach", date: "March 2026", read: "9 min" },
-        { id: 19, title: "The Sales Discovery Call Framework That Closes Deals", url: "/blog/sales-discovery-call-framework", emoji: "📞", category: "outreach", date: "March 2026", read: "10 min" },
-        { id: 20, title: "Fractional VP of Sales vs. Sales Consultant: Which Do You Need?", url: "/blog/fractional-vp-sales-vs-sales-consultant", emoji: "⚖️", category: "fractional-vp", date: "March 2026", read: "7 min" },
-        { id: 21, title: "What a Fractional VP of Sales Actually Does in Month 1", url: "/blog/fractional-vp-sales-month-1-deliverables", emoji: "🎯", category: "fractional-vp case-study", date: "April 2026", read: "7 min" }
-    ];
-
-    function renderPosts(category = 'all') {
-        const grid = document.getElementById('post-grid');
-        const filtered = category === 'all' ? posts : posts.filter(p => p.category.includes(category));
-        
-        grid.innerHTML = filtered.map(post => `
-            <a href="${post.url}" class="post-card bg-white rounded-2xl shadow-md overflow-hidden block border border-gray-100 hover:border-blue-300">
-                <div class="h-32 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
-                    <span class="text-5xl">${post.emoji}</span>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">${post.title}</h3>
-                    <div class="flex items-center gap-3 text-xs text-gray-500 mt-4">
-                        <span>Michael Flournoy</span>
-                        <span>·</span>
-                        <span>${post.date}</span>
-                        <span>·</span>
-                        <span>${post.read} read</span>
-                    </div>
-                </div>
-            </a>
-        `).join('');
-        
-        document.getElementById('no-results').classList.toggle('hidden', filtered.length > 0);
-    }
-
-    function filterPosts(category) {
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === category);
-        });
-        renderPosts(category);
-    }
-
-    // Initial render
-    renderPosts();
-    </script>
-    <script src="/chat-widget.js" defer></script>
-
-<!-- Calendly Modal (site-wide) -->
-<div id="calendly-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;overflow-y:auto;">
-  <div style="background:white;border-radius:20px;padding:0;max-width:660px;width:95%;margin:20px auto;position:relative;overflow:hidden;">
-    <button onclick="document.getElementById('calendly-modal').style.display='none'; document.body.style.overflow='auto';" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:28px;cursor:pointer;color:#666;z-index:10000;line-height:1;">&times;</button>
-    <iframe id="calendly-iframe" data-src="https://calendly.com/gsdassociatesllc/30min?hide_gdpr_banner=1&primary_color=ea580c" src="" width="100%" height="580" frameborder="0" scrolling="yes" style="display:block;border-radius:20px;"></iframe>
-  </div>
-</div>
-<script>
-document.getElementById('calendly-modal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    var m = document.getElementById('calendly-modal');
-    if (m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
-  }
-});
-</script>
-  <script src="/gsd-book-modal.js" defer></script>
-  <script src="/gsd-dynamic.js" defer></script>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-8 text-sm">
+        <p>© 2026 GSD Associates · <a href="/" class="hover:text-white">gsdassociates.net</a> · <a href="/blog/" class="hover:text-white">Blog</a></p>
+    </footer>
 </body>
 </html>
