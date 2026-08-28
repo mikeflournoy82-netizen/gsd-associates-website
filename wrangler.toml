@@ -1,6 +1,18 @@
-# Cloudflare Pages configuration for gsd-associates-website
-name = "gsd-associates-website"
-compatibility_date = "2026-03-25"
+name = "gsd-associates"
+type = "javascript"
+account_id = "5528ec7b36f6b9f9a17c1e1bffe65e7d"
+workers_dev = true
 
-# Pages-specific: Tell Pages where the built files are
-pages_build_output_dir = "public"
+[env.production]
+name = "gsd-associates"
+routes = [
+  { pattern = "gsdassociates.net/*", zone_name = "gsdassociates.net" },
+  { pattern = "www.gsdassociates.net/*", zone_name = "gsdassociates.net" }
+]
+
+[build]
+command = "npm install"
+cwd = "./"
+
+[build.upload]
+format = "modules"

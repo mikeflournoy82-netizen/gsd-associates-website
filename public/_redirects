@@ -1,4 +1,43 @@
 # Cloudflare Pages _redirects
-# ONLY handle blog posts — let Cloudflare's default behavior handle everything else
+# Blog routing is now handled by functions/blog/[slug].js
+# This file only contains non-blog redirects
 
-/blog/* /blog/:splat/index.html 200
+# Folder pages
+/playbook /playbook/index.html 200
+/resources /resources/index.html 200
+/about /about/index.html 200
+/team /team/index.html 200
+/case-studies /case-studies/index.html 200
+/blog /blog/index.html 200
+/products /products/index.html 200
+/ads /ads/index.html 200
+
+# Product pages
+/products/sales-audit /products/sales-audit/index.html 200
+/products/sales-sprint /products/sales-sprint/index.html 200
+/products/sales-os /products/sales-os/index.html 200
+
+# Ad landing pages
+/ads/sales-audit /ads/sales-audit/index.html 200
+/ads/sales-sprint /ads/sales-sprint/index.html 200
+/ads/sales-os /ads/sales-os/index.html 200
+
+# Success pages
+/products/sales-audit/success /products/sales-audit/success.html 200
+/products/sales-sprint/success /products/sales-sprint/success.html 200
+/products/sales-os/success /products/sales-os/success.html 200
+
+# Landing pages
+/lp/start /lp/start/index.html 200
+/lp/google-ads /lp/google-ads/index.html 200
+/go /lp/google-ads/ 301
+
+# Definition page
+/what-is-a-fractional-vp-of-sales /what-is-a-fractional-vp-of-sales/index.html 200
+
+# Old redirects
+/privacy-policy /privacy/ 301
+/privacy-policy/* /privacy/ 301
+
+# Root fallback (catch-all)
+/ /index.html 200
