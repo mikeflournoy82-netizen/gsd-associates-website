@@ -1,0 +1,68 @@
+# ============================================================================
+# GSD ASSOCIATES ROUTING RULES
+# 
+# CRITICAL: Cloudflare Pages processes rules TOP-TO-BOTTOM. 
+# More specific rules must come BEFORE catch-alls.
+# Blog posts route via /blog/* BEFORE index.html
+# ============================================================================
+
+# ============================================================================
+# BLOG POSTS (must be early, before catch-all)
+# ============================================================================
+/blog/* /blog/:splat/index.html 200
+
+# ============================================================================
+# FOLDER PAGES (served as folder/index.html)
+# ============================================================================
+/playbook /playbook/index.html 200
+/resources /resources/index.html 200
+/about /about/index.html 200
+/team /team/index.html 200
+/case-studies /case-studies/index.html 200
+/blog /blog/index.html 200
+/products /products/index.html 200
+/ads /ads/index.html 200
+
+# ============================================================================
+# PRODUCT PAGES
+# ============================================================================
+/products/sales-audit /products/sales-audit/index.html 200
+/products/sales-sprint /products/sales-sprint/index.html 200
+/products/sales-os /products/sales-os/index.html 200
+
+# ============================================================================
+# AD LANDING PAGES
+# ============================================================================
+/ads/sales-audit /ads/sales-audit/index.html 200
+/ads/sales-sprint /ads/sales-sprint/index.html 200
+/ads/sales-os /ads/sales-os/index.html 200
+
+# ============================================================================
+# SUCCESS PAGES
+# ============================================================================
+/products/sales-audit/success /products/sales-audit/success.html 200
+/products/sales-sprint/success /products/sales-sprint/success.html 200
+/products/sales-os/success /products/sales-os/success.html 200
+
+# ============================================================================
+# LANDING PAGES
+# ============================================================================
+/lp/start /lp/start/index.html 200
+/lp/google-ads /lp/google-ads/index.html 200
+/go /lp/google-ads/ 301
+
+# ============================================================================
+# DEFINITION PAGES
+# ============================================================================
+/what-is-a-fractional-vp-of-sales /what-is-a-fractional-vp-of-sales/index.html 200
+
+# ============================================================================
+# REDIRECTS (old URLs)
+# ============================================================================
+/privacy-policy /privacy/ 301
+/privacy-policy/* /privacy/ 301
+
+# ============================================================================
+# ROOT INDEX (MUST BE LAST - catch-all for home)
+# ============================================================================
+/ /index.html 200
