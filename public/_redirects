@@ -1,6 +1,10 @@
 # Cloudflare Pages _redirects
-# Blog routing is now handled by functions/blog/[slug].js
-# This file only contains non-blog redirects
+# Blog routing handled by both _redirects rules AND functions/blog/[slug].js
+
+# ===== BLOG ROUTING (CRITICAL - must be BEFORE catch-all) =====
+# Cloudflare Pages requires explicit rules for each path pattern
+/blog/*/index.html /blog/:splat/index.html 200
+/blog/* /blog/:splat/index.html 200
 
 # Folder pages
 /playbook /playbook/index.html 200
@@ -39,5 +43,5 @@
 /privacy-policy /privacy/ 301
 /privacy-policy/* /privacy/ 301
 
-# Root fallback (catch-all)
+# Root fallback (catch-all) - MUST BE LAST
 / /index.html 200
