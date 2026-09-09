@@ -29,6 +29,27 @@ function gtag_report_conversion(url) {
   return false;
 }
 </script>
+    <!-- Meta Pixel Code (Dual Tracking) -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '947084454377360');
+fbq('init', '856808710813498');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=947084454377360&ev=PageView&noscript=1"
+/></noscript>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=856808710813498&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head><body class="bg-gray-50">
 <nav class="fixed w-full bg-white shadow-lg z-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center h-20"><a href="/" class="text-2xl font-bold gradient-text">GSD Associates</a><div class="hidden md:flex space-x-8 items-center"><a href="/#services" class="text-gray-700 hover:text-blue-700 font-medium">Pricing</a><a href="/blog/" class="text-gray-700 hover:text-blue-700 font-medium">Blog</a><a href="/resources/" class="text-gray-700 hover:text-blue-700 font-medium">Resources</a><a href="/about/" class="text-gray-700 hover:text-blue-700 font-medium">About</a><a href="/team/" class="text-gray-700 hover:text-blue-700 font-medium">Team</a><a href="#" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-full font-semibold" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';">Book Strategy Call</a></div></div></div></nav>
 
