@@ -182,6 +182,9 @@ fbq('init','947084454377360');fbq('track','PageView');
     <!-- Calendly Conversion Tracking -->
     <script src="/calendly-conversion.js" defer></script>
 
+    <!-- Surfn Embed -->
+    <script src="https://surfn.ai/embed/v1.js" defer></script>
+
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -311,6 +314,11 @@ fbq('init','947084454377360');fbq('track','PageView');
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-4">
+                            <surfn-launch-button href="https://surfn.ai/agent-iframes/TTsjBMzkRz" type="modal">
+                              <button class="bg-blue-600 text-white px-10 py-5 rounded-full font-black text-xl hover:bg-blue-700 transition shadow-2xl inline-block text-center border-2 border-white">
+                                🚀 Try Me (AI Demo)
+                              </button>
+                            </surfn-launch-button>
                             <a href="#" class="hero-cta-pulse bg-orange-500 text-white px-10 py-5 rounded-full font-black text-xl hover:bg-orange-600 transition shadow-2xl inline-block text-center border-2 border-white" onclick="var cm=document.getElementById('calendly-modal'),ci=document.getElementById('calendly-iframe');if(ci&&ci.src.indexOf('calendly')===-1){ci.src=ci.getAttribute('data-src');}cm.style.display='flex';document.body.style.overflow='hidden';if(window.gtag){gtag('event','calendly_click',{event_category:'conversion',event_label:'hero_cta'});}">
                                 <i class="fas fa-calculator mr-2"></i>
                                 Book a Free Strategy Call
@@ -574,6 +582,13 @@ fbq('init','947084454377360');fbq('track','PageView');
                                 <button type="submit" id="gsd-submit-btn" style="width:100%;background:linear-gradient(135deg,#f97316,#ea580c);color:white;font-weight:800;font-size:16px;padding:15px;border:none;border-radius:10px;cursor:pointer;">Reserve My Free Strategy Call →</button>
                                 <div style="display:flex;justify-content:center;gap:14px;margin-top:12px;flex-wrap:wrap;"><span style="color:#6b7280;font-size:12px;">🔒 Private &amp; secure</span><span style="color:#6b7280;font-size:12px;">🚫 No spam</span><span style="color:#6b7280;font-size:12px;">📅 Pick your time next</span></div>
                               </form>
+                              <!-- Surfn Try Me Button -->
+                              <div style="margin-top:20px;padding-top:20px;border-top:1px solid #e5e7eb;text-align:center;">
+                                <div style="color:#6b7280;font-size:13px;margin-bottom:12px;font-weight:600;">Or try a quick demo first:</div>
+                                <surfn-launch-button href="https://surfn.ai/agent-iframes/TTsjBMzkRz" type="modal">
+                                  <button style="background:linear-gradient(135deg,#3b82f6,#1e40af);color:white;font-weight:700;padding:12px 24px;border:none;border-radius:10px;cursor:pointer;font-size:15px;width:100%;transition:all 0.2s;">🚀 Try Me (AI Demo)</button>
+                                </surfn-launch-button>
+                              </div>
                             </div>
                             <div id="gsd-loading-step" style="display:none;text-align:center;padding:60px 24px;">
                               <div style="width:44px;height:44px;border:4px solid #e5e7eb;border-top-color:#ea580c;border-radius:50%;animation:gsdSpin 0.8s linear infinite;margin:0 auto 20px;"></div>
