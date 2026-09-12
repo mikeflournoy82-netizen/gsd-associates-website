@@ -409,7 +409,8 @@ async function handleDownload() {
 
     // Track as conversion event via centralized tracking
     if (typeof window.gsdTrackResourceDownload === 'function') {
-        window.gsdTrackResourceDownload(currentResourceName, email);
+        const name = document.getElementById('nameInput').value || '';
+        window.gsdTrackResourceDownload(currentResourceName, email, name);
     }
 
     // Log to Google Sheet via centralized tracking
